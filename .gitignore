@@ -1,1 +1,27 @@
-Embedded Systems Bootcamp/
+# Bootcamps personales: nunca se publican por defecto.
+Bootcamps/*
+
+# Estructura genérica que sí forma parte del PLF público.
+!Bootcamps/README.md
+!Bootcamps/_template/
+!Bootcamps/_template/**
+
+# Secretos y configuración local.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.*
+credentials.*
+
+# Archivos del sistema y editores.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
