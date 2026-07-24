@@ -1,6 +1,6 @@
 # Professional Learning Framework (PLF)
 
-**Versión:** 1.1.0  
+**Versión:** 1.2.0  
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Documento Fundacional
@@ -295,9 +295,23 @@ Las instrucciones de ejecución se encuentran en:
 - `Framework/07-COMMAND-PROTOCOL.md`;
 - `Framework/08-FILE-SAFETY-POLICY.md`;
 - `Framework/09-BOOTCAMP-BOOTSTRAP.md`.
+- `Framework/10-MULTI-DEVICE-SYNC.md`.
 
 Durante una unidad normal solo puede escribirse en el Bootcamp cuyo nombre
 coincide con el Project.
+
+### Sincronización entre computadores
+
+Un Bootcamp personal puede mantenerse en un repositorio privado independiente.
+
+```text
+origin    → repositorio privado del Bootcamp
+upstream  → repositorio público grimlin31/PLF
+```
+
+No se utiliza un fork privado del PLF público. Los comandos
+`/sincronizar-capitulo` y `/reanudar-capitulo` preservan una unidad incompleta
+sin confundirla con un cierre formal.
 
 ---
 
