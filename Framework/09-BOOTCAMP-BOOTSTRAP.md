@@ -2,8 +2,8 @@
 
 ## 09 — Bootstrap conversacional de Bootcamps
 
-**Versión:** 1.0.0  
-**Requiere PLF:** 1.1.0  
+**Versión:** 1.1.0  
+**Requiere PLF:** 1.2.0  
 **Estado:** Aprobado
 
 ## 1. Objetivo
@@ -55,6 +55,17 @@ Preguntar una cosa a la vez y adaptar preguntas posteriores para no repetir info
     - industrias;
     - estilo pedagógico.
 11. Restricciones, riesgos o temas excluidos.
+12. Modo de persistencia:
+    - solo local;
+    - repositorio privado para sincronización entre dispositivos.
+
+Si se elige repositorio privado, solicitar únicamente:
+
+- identificador o URL del repositorio;
+- rama principal;
+- confirmación de que la visibilidad es privada.
+
+No solicitar ni almacenar tokens, contraseñas o claves.
 
 ### Datos inferibles
 
@@ -102,6 +113,7 @@ Tras aprobación:
    - `03-LEARNING-PROFILE.md`;
    - `04-CURRICULUM-MAP.md`;
    - `05-BOOTCAMP-STATE.md`;
+   - `06-CURRENT-CHAPTER.md`;
    - `Chapters/`;
    - `Projects/`;
    - `Interviews/`;
@@ -109,6 +121,14 @@ Tras aprobación:
 4. Establecer `current_focus`.
 5. Verificar estructura y coherencia.
 6. Informar qué se creó.
+
+Si se aprobó sincronización privada:
+
+7. configurar en `00-BOOTCAMP-CONFIG.md` los nombres esperados de `origin` y
+   `upstream`;
+8. verificar la topología descrita en `10-MULTI-DEVICE-SYNC.md`;
+9. no publicar nada hasta verificar que `origin` es privado y distinto del PLF
+   público.
 
 El usuario no tiene que crear ni editar archivos de configuración manualmente.
 
