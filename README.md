@@ -360,7 +360,12 @@ Dispondrá además de:
 
 ## 12. Licencia de Uso
 
-El Professional Learning Framework está concebido como una metodología abierta para uso personal o profesional.
+El Professional Learning Framework se distribuye bajo la
+[licencia MIT](LICENSE).
+
+Esta licencia permite utilizar, copiar, modificar y distribuir el Framework,
+incluso con fines comerciales, siempre que se conserve el aviso de copyright y
+el texto de la licencia.
 
 Cada estudiante es propietario de la documentación generada durante su proceso de aprendizaje.
 
