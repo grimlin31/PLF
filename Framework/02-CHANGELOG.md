@@ -2,7 +2,7 @@
 
 ## 02 — Changelog
 
-**Versión:** 1.1.0  
+**Versión:** 1.2.0  
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Registro oficial de cambios  
@@ -436,9 +436,62 @@ change:
   evidence_or_decision_reference: "Arquitectura PLF v1.0 aprobada."
 ```
 
+### CHG-0012 — Sincronización privada y checkpoints parciales
+
+```yaml
+change:
+  id: "CHG-0012"
+  title: "Sincronización privada y checkpoints parciales"
+  status: "IMPLEMENTED"
+  type: "MINOR"
+  proposed_at: "2026-07-24"
+  approved_at: "2026-07-24"
+  implemented_at: "2026-07-24"
+  effective_from: "PLF 1.2.0"
+  requested_by: "Estudiante"
+  reason: "Continuar una unidad incompleta desde varios computadores sin publicar información personal."
+  description: "Se define un repositorio privado independiente por Bootcamp, remotos origin/upstream y comandos para consultar, sincronizar y reanudar checkpoints."
+  affected_documents:
+    - "AGENTS.md"
+    - "README.md"
+    - "Framework/00-MASTER-CONTEXT.md"
+    - "Framework/02-CHANGELOG.md"
+    - "Framework/06-BOOTCAMP-STATE.md"
+    - "Framework/07-COMMAND-PROTOCOL.md"
+    - "Framework/08-FILE-SAFETY-POLICY.md"
+    - "Framework/09-BOOTCAMP-BOOTSTRAP.md"
+    - "Framework/10-MULTI-DEVICE-SYNC.md"
+    - "Bootcamps/_template/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/_template/06-CURRENT-CHAPTER.md"
+  affected_bootcamps: []
+  backward_compatible: true
+  migration_required: true
+  migration_notes: "Las instancias existentes deben añadir 06-CURRENT-CHAPTER.md y configurar su repositorio privado antes de usar sincronización."
+  evidence_or_decision_reference: "Solicitud explícita de continuidad entre dos computadores."
+```
+
 ---
 
 ## 7. Versiones publicadas
+
+### PLF 1.2.0 — Private Multi-Device Continuity
+
+**Estado:** `IMPLEMENTED`  
+**Fecha de aprobación:** 2026-07-24  
+**Compatibilidad:** Compatible; requiere migración para activar sincronización
+
+#### Cambios
+
+- Repositorio privado independiente por Bootcamp.
+- Remoto `origin` privado y remoto `upstream` público.
+- Checkpoint `06-CURRENT-CHAPTER.md`.
+- Comandos `/sincronizar-capitulo` y `/reanudar-capitulo`.
+- Ampliación segura de `/estado-capitulo`.
+- Protección contra publicación accidental, divergencia y force push.
+
+#### Documento implementado
+
+- `Framework/10-MULTI-DEVICE-SYNC.md`
 
 ### PLF 1.1.0 — Local Project Operation
 
@@ -579,6 +632,12 @@ Antes de publicar una versión se debe comprobar:
 ---
 
 ## 12. Historial del documento
+
+### 1.2.0
+
+- Registro de sincronización privada entre dispositivos.
+- Registro de checkpoints parciales y comandos de continuidad.
+- Publicación de PLF 1.2.0.
 
 ### 1.0.0
 
