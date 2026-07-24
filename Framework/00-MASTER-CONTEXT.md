@@ -2,7 +2,7 @@
 
 ## 00 — Master Context
 
-**Versión:** 1.1.0  
+**Versión:** 1.2.0  
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Especificación fundacional  
@@ -467,6 +467,7 @@ Cuando el asistente cree un chat por solicitud explícita del estudiante:
 La sesión debe recibir:
 
 - el archivo de estado vigente;
+- el checkpoint parcial vigente cuando una unidad está en progreso;
 - el identificador del capítulo o laboratorio;
 - los documentos específicos que sean necesarios.
 
@@ -482,6 +483,9 @@ El mentor debe:
 - actualizar el perfil de aprendizaje cuando corresponda;
 - definir el próximo paso;
 - generar las versiones actualizadas de los documentos afectados.
+
+Una sesión puede cerrarse sin cerrar su capítulo. En ese caso debe preservarse
+un checkpoint parcial mediante `/sincronizar-capitulo`.
 
 ---
 
@@ -602,6 +606,7 @@ Framework/06-BOOTCAMP-STATE.md
 Framework/07-COMMAND-PROTOCOL.md
 Framework/08-FILE-SAFETY-POLICY.md
 Framework/09-BOOTCAMP-BOOTSTRAP.md
+Framework/10-MULTI-DEVICE-SYNC.md
 Templates/
 Bootcamps/
 Assets/
@@ -625,6 +630,10 @@ Los chats y herramientas de IA son entornos de trabajo temporales.
 - El estado vigente debe permitir iniciar una nueva sesión.
 - El sistema debe continuar siendo utilizable aunque cambie la plataforma, el dispositivo o el mentor.
 - La información dinámica no debe depender exclusivamente del historial de una conversación.
+- La sincronización entre dispositivos debe usar un repositorio privado
+  independiente para el Bootcamp personal.
+- El PLF público se configura como `upstream`; nunca como destino del progreso.
+- Un checkpoint parcial no equivale al cierre de una unidad.
 
 ---
 
@@ -660,6 +669,14 @@ Finaliza cuando:
 ---
 
 ## 23. Historial del documento
+
+### 1.2.0
+
+- Incorporación de checkpoints parciales para unidades sin terminar.
+- Incorporación de sincronización privada entre dispositivos.
+- Separación formal entre `origin` privado y `upstream` público.
+- Incorporación de continuidad mediante `/sincronizar-capitulo` y
+  `/reanudar-capitulo`.
 
 ### 1.1.0
 
@@ -707,12 +724,15 @@ Project name == Bootcamps/<Project name>/
 El comportamiento operativo se define en:
 
 - `Framework/07-COMMAND-PROTOCOL.md`;
-- `Framework/09-BOOTCAMP-BOOTSTRAP.md`.
+- `Framework/09-BOOTCAMP-BOOTSTRAP.md`;
+- `Framework/10-MULTI-DEVICE-SYNC.md`.
 
 Los comandos mínimos son:
 
 - `/iniciar-bootcamp`;
 - `/estado-capitulo`;
+- `/sincronizar-capitulo`;
+- `/reanudar-capitulo`;
 - `/estado-mentoria`;
 - `/cerrar-capitulo`;
 - `/cancelar-cierre`;
