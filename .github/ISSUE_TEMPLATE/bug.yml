@@ -1,0 +1,32 @@
+name: Reportar un problema
+description: Informar un error reproducible del Framework público.
+title: "[Problema]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No incluyas datos personales, secretos ni archivos de un Bootcamp privado.
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: Explica el comportamiento observado y el esperado.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Pasos para reproducirlo
+      description: Incluye únicamente la información mínima necesaria.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versión del PLF
+      placeholder: "1.1.0"
+    validations:
+      required: true
+
