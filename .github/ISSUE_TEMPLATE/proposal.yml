@@ -1,0 +1,28 @@
+name: Proponer una mejora
+description: Proponer una mejora para una versión futura del PLF.
+title: "[Propuesta]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema que resuelve
+      description: Describe la necesidad sin incluir información privada.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Solución propuesta
+      description: Explica el comportamiento esperado y su alcance.
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibilidad e impacto
+      description: Indica si modifica reglas, plantillas o documentos existentes.
+    validations:
+      required: true
+
