@@ -2,7 +2,7 @@
 
 ## 06 — Bootcamp State
 
-**Versión:** 1.1.0  
+**Versión:** 1.2.0  
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Estado operativo y transferible  
@@ -70,7 +70,7 @@ state:
   project_name: "POR DEFINIR — igual a bootcamp_name"
   resolved_folder: "Bootcamps/<project_name>"
   state_version: "1.0.0"
-  framework_version: "1.1.0"
+  framework_version: "1.2.0"
   curriculum_version: "POR DEFINIR"
   knowledge_index_version: "POR DEFINIR"
   student: "POR DEFINIR"
@@ -253,6 +253,24 @@ current_focus:
 
 Si `pending_question` contiene una pregunta, el mentor debe esperar la respuesta antes de avanzar.
 
+### Checkpoint parcial
+
+El detalle transferible de una unidad sin terminar pertenece a:
+
+```text
+06-CURRENT-CHAPTER.md
+```
+
+```yaml
+chapter_checkpoint:
+  file: "06-CURRENT-CHAPTER.md"
+  last_checkpoint_at: null
+  last_checkpoint_commit: null
+  synchronization_status: "LOCAL_ONLY | NOT_SYNCED | SYNCED | CONFLICT"
+```
+
+Actualizar este bloque no cierra la unidad ni modifica su nivel de competencia.
+
 ---
 
 ## 11. Competencias resumidas
@@ -432,7 +450,9 @@ required_context:
     - "Framework/07-COMMAND-PROTOCOL.md"
     - "Framework/08-FILE-SAFETY-POLICY.md"
     - "Framework/09-BOOTCAMP-BOOTSTRAP.md"
+    - "Framework/10-MULTI-DEVICE-SYNC.md"
     - "Framework/06-BOOTCAMP-STATE.md"
+    - "Bootcamps/<project_name>/06-CURRENT-CHAPTER.md"
   for_current_unit: []
   optional: []
   do_not_load_unless_needed: []
@@ -500,6 +520,7 @@ El historial completo pertenece al Mentor Log y al Changelog.
 Este archivo debe actualizarse:
 
 - al cerrar una sesión;
+- al crear un checkpoint mediante `/sincronizar-capitulo`;
 - al cambiar la unidad activa;
 - al formular una pregunta que quedará pendiente;
 - al detectar o resolver un bloqueo;
@@ -534,11 +555,19 @@ Antes de guardar el estado se debe comprobar:
 - que las rutas de los artefactos existan o estén marcadas como pendientes;
 - que `required_context` contenga solo lo necesario;
 - que la instrucción de reanudación esté completa;
+- que el checkpoint parcial coincida con `current_focus`;
+- que el estado de sincronización no afirme un push no verificado;
 - que no se hayan inventado datos históricos.
 
 ---
 
 ## 25. Historial del documento
+
+### 1.2.0
+
+- Incorporación del checkpoint parcial de una unidad sin terminar.
+- Incorporación del estado de sincronización y commit remoto.
+- Incorporación del protocolo de continuidad entre dispositivos.
 
 ### 1.1.0
 

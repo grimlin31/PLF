@@ -11,7 +11,9 @@ Al recibir el primer mensaje de una sesión:
 3. Leer `Framework/07-COMMAND-PROTOCOL.md`.
 4. Leer `Framework/08-FILE-SAFETY-POLICY.md`.
 5. Leer `Framework/09-BOOTCAMP-BOOTSTRAP.md`.
-6. Resolver el nombre del Project actual.
+6. Leer `Framework/10-MULTI-DEVICE-SYNC.md` cuando exista un repositorio Git
+   o se solicite sincronización.
+7. Resolver el nombre del Project actual.
 
 ## 2. Resolución del Bootcamp
 
@@ -60,6 +62,26 @@ Aplicar íntegramente `Framework/08-FILE-SAFETY-POLICY.md`.
 - No sobrescribir cambios del usuario.
 - No inventar tiempo, progreso o evidencia.
 - Verificar y reportar cada conjunto de modificaciones.
+
+## 6.1 Sincronización entre dispositivos
+
+Cuando se invoque `/sincronizar-capitulo`:
+
+- verificar que `origin` sea el repositorio privado configurado;
+- verificar que `origin` no sea el PLF público;
+- obtener el estado remoto antes de escribir;
+- detenerse ante atraso o divergencia;
+- actualizar solamente el Bootcamp seleccionado;
+- no cerrar la unidad ni avanzar `current_focus`;
+- no usar force push;
+- informar el commit y si quedó disponible en el remoto.
+
+Cuando se invoque `/reanudar-capitulo`:
+
+- actualizar mediante fast-forward únicamente si el árbol está limpio;
+- detenerse ante cambios locales o divergencia;
+- cargar `05-BOOTCAMP-STATE.md` y `06-CURRENT-CHAPTER.md`;
+- reanudar desde la pregunta o acción exacta registrada.
 
 ## 7. Creación de chats
 

@@ -2,9 +2,9 @@
 
 ## Bootcamp Configuration
 
-**Version:** 1.0.0  
+**Version:** 1.1.0  
 **Status:** `DRAFT`  
-**Framework version:** 1.1.0
+**Framework version:** 1.2.0
 
 ```yaml
 bootcamp:
@@ -47,6 +47,17 @@ student:
   gaps_declared: []
   motivation: "POR DEFINIR"
   weekly_availability_hours: 0
+
+repository:
+  mode: "LOCAL_ONLY | PRIVATE_BOOTCAMP_REPOSITORY"
+  expected_visibility: "PRIVATE"
+  private_repository: null
+  default_branch: "main"
+  progress_remote: "origin"
+  framework_remote: "upstream"
+  framework_repository: "https://github.com/grimlin31/PLF.git"
+  allow_direct_checkpoint_push: true
+  allow_force_push: false
 ```
 
 ## Approval
@@ -56,3 +67,5 @@ student:
 - [ ] Student profile approved.
 - [ ] Critical dates confirmed.
 - [ ] Initial curriculum approved.
+- [ ] Repository mode approved.
+- [ ] Private synchronization destination verified, when enabled.

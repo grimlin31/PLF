@@ -2,8 +2,8 @@
 
 ## 07 — Protocolo de comandos
 
-**Versión:** 1.0.0  
-**Requiere PLF:** 1.1.0  
+**Versión:** 1.1.0  
+**Requiere PLF:** 1.2.0  
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -35,6 +35,7 @@ Comportamiento:
 
 Alias naturales:
 
+- `/capitulo estado`;
 - `estado del capítulo`;
 - `resumen del capítulo`;
 - `cuánto falta para terminar el capítulo`.
@@ -43,7 +44,7 @@ Comportamiento de solo lectura:
 
 1. Leer `05-BOOTCAMP-STATE.md`.
 2. Identificar la unidad activa.
-3. Leer sus notas, ejercicios y evidencia disponible.
+3. Leer `06-CURRENT-CHAPTER.md`, sus notas, ejercicios y evidencia disponible.
 4. Informar:
    - objetivo;
    - contenido completado;
@@ -67,6 +68,129 @@ Bloqueos:
 Estimación restante:
 Siguiente acción:
 ```
+
+Cuando existe un repositorio privado configurado:
+
+1. puede ejecutar `git fetch origin` para conocer el estado remoto sin cambiar
+   los archivos de trabajo;
+2. debe informar si el estado local está sincronizado, adelantado, atrasado o
+   divergente respecto de `origin/main`;
+3. no debe mezclar, restaurar, descartar ni publicar cambios.
+
+### `/sincronizar-capitulo`
+
+Alias naturales:
+
+- `/capitulo sincronizar`;
+- `guardar progreso`;
+- `guardar checkpoint`;
+- `sincronizar capítulo`;
+- `actualizar el capítulo sin cerrarlo`;
+- `guardar para continuar en otro computador`.
+
+Propósito:
+
+Crear un checkpoint parcial, actualizar los documentos dinámicos necesarios y
+publicar el estado actual únicamente en el repositorio privado del Bootcamp.
+
+Este comando no cierra el capítulo.
+
+#### Precondiciones
+
+1. Resolver un único Bootcamp mediante Project–carpeta.
+2. Leer `Framework/10-MULTI-DEVICE-SYNC.md`.
+3. Verificar que `origin` coincide con el repositorio privado configurado.
+4. Verificar que `origin` no es `grimlin31/PLF`.
+5. Obtener el estado remoto.
+6. Detenerse si `origin/main` contiene cambios no incorporados o existe
+   divergencia.
+7. Inspeccionar cambios locales y preservar los que pertenezcan al usuario.
+8. Rechazar secretos, credenciales y archivos de otros Bootcamps.
+
+#### Actualización pedagógica
+
+Actualizar, según la evidencia disponible:
+
+- notas de la unidad activa;
+- `02-MENTOR-LOG.md`, con tiempo únicamente confirmado;
+- `05-BOOTCAMP-STATE.md`;
+- `06-CURRENT-CHAPTER.md`;
+- ejercicios, código o evidencia activa que ya pertenezcan a la unidad.
+
+Debe registrar:
+
+- último punto completado;
+- punto exacto de continuación;
+- pregunta pendiente;
+- siguiente acción;
+- criterios restantes;
+- artefactos activos;
+- tiempo confirmado;
+- fecha del checkpoint.
+
+No debe:
+
+- marcar la unidad `COMPLETED`;
+- cambiar a la unidad siguiente;
+- elevar competencias sin evidencia;
+- inventar horas;
+- modificar rutas genéricas protegidas.
+
+#### Publicación
+
+1. Mostrar el resumen de diferencias.
+2. Preparar solamente archivos del Bootcamp seleccionado.
+3. Crear un commit con formato:
+
+   ```text
+   checkpoint(<unit_id>): guardar progreso parcial
+   ```
+
+4. Publicarlo en `origin` sin reescribir historial.
+5. Registrar el hash resultante en `06-CURRENT-CHAPTER.md` cuando sea posible
+   sin crear un ciclo de commits; de lo contrario, informar el hash como
+   resultado externo confirmado.
+6. Verificar que el remoto recibió el commit.
+
+Si el push falla, conservar el commit local y reportar que el checkpoint todavía
+no está disponible en el otro computador.
+
+#### Resultado mínimo
+
+```text
+Unidad:
+Estado parcial:
+Último punto completado:
+Pregunta pendiente:
+Siguiente acción:
+Archivos actualizados:
+Commit:
+Destino:
+Estado de sincronización:
+```
+
+### `/reanudar-capitulo`
+
+Alias naturales:
+
+- `/capitulo reanudar`;
+- `continuar desde otro computador`;
+- `cargar último checkpoint`;
+- `obtener y continuar el capítulo`.
+
+Comportamiento:
+
+1. Resolver el Bootcamp y verificar sus remotos.
+2. Inspeccionar cambios locales.
+3. Obtener `origin/main`.
+4. Si el árbol está limpio y el historial permite avance rápido, actualizar la
+   copia local mediante `fast-forward`.
+5. Si existen cambios locales o divergencia, detenerse sin sobrescribir.
+6. Leer `05-BOOTCAMP-STATE.md` y `06-CURRENT-CHAPTER.md`.
+7. Informar el punto exacto de reanudación.
+8. Si existe `pending_question`, repetirla exactamente y esperar la respuesta.
+
+Este comando no crea un checkpoint nuevo ni cierra la unidad.
 
 ### `/estado-mentoria`
 
@@ -172,6 +296,10 @@ Requiere:
 6. registro en `Framework/02-CHANGELOG.md`.
 
 Nunca se ejecuta como consecuencia implícita de cerrar un capítulo.
+
+La sincronización de una instancia privada tampoco autoriza modificar el
+Framework genérico. La incorporación de cambios desde el PLF público se rige
+por `Framework/10-MULTI-DEVICE-SYNC.md`.
 
 ## 3. Prioridad entre comandos y conversación
 

@@ -2,8 +2,8 @@
 
 ## 08 — Política de seguridad de archivos
 
-**Versión:** 1.0.0  
-**Requiere PLF:** 1.1.0  
+**Versión:** 1.1.0  
+**Requiere PLF:** 1.2.0  
 **Estado:** Aprobado
 
 ## 1. Principio de mínimo alcance
@@ -116,6 +116,53 @@ Se recomienda Git para restaurar cambios. Cuando exista:
 
 La ausencia de Git no autoriza operaciones irreversibles.
 
+### 10.1 Repositorios privados de Bootcamp
+
+Para sincronización entre dispositivos:
+
+- `origin` representa el repositorio privado de la instancia;
+- `upstream` representa el PLF público;
+- un Bootcamp personal nunca se publica en `upstream`;
+- no se usa un fork público como almacenamiento privado;
+- no se usa `push --force`;
+- no se reescribe historial;
+- no se hace push si el destino no puede verificarse;
+- no se publica más de un Bootcamp por accidente.
+
+Antes de `/sincronizar-capitulo`:
+
+1. verificar la URL de `origin`;
+2. verificar que no sea el repositorio público del PLF;
+3. obtener el estado remoto;
+4. comprobar avance, atraso o divergencia;
+5. inspeccionar archivos preparados;
+6. buscar secretos;
+7. confirmar que el conjunto pertenece al Bootcamp seleccionado.
+
+### 10.2 Protección ante dos dispositivos
+
+Si el remoto avanzó desde otro computador:
+
+- no sobrescribir;
+- no forzar;
+- no fusionar automáticamente contenido pedagógico contradictorio;
+- detenerse y mostrar los archivos afectados.
+
+Solo se permite actualización automática mediante avance rápido cuando el árbol
+local está limpio y no existe divergencia.
+
+### 10.3 Checkpoints parciales
+
+Un checkpoint puede actualizar documentos dinámicos del Bootcamp, pero no
+autoriza:
+
+- cerrar la unidad;
+- cambiar `current_focus` a la siguiente;
+- declarar competencias;
+- modificar el Framework;
+- restaurar una versión anterior;
+- borrar trabajo local.
+
 ## 11. Privacidad y secretos
 
 No almacenar en Markdown:
@@ -139,7 +186,11 @@ Detener la escritura cuando:
 - la unidad solicitada contradice `current_focus`;
 - una ruta protegida parece necesaria sin autorización;
 - el cambio destruiría información;
-- falta una decisión material del estudiante.
+- falta una decisión material del estudiante;
+- `origin` no coincide con el repositorio privado configurado;
+- `origin` apunta al PLF público;
+- otro dispositivo publicó cambios no incorporados;
+- la sincronización requeriría un push forzado.
 
 ## 13. Informe de cambios
 

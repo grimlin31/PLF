@@ -29,6 +29,8 @@ jobs:
             "Framework/07-COMMAND-PROTOCOL.md"
             "Framework/08-FILE-SAFETY-POLICY.md"
             "Framework/09-BOOTCAMP-BOOTSTRAP.md"
+            "Framework/10-MULTI-DEVICE-SYNC.md"
+            "Bootcamps/_template/06-CURRENT-CHAPTER.md"
             ".github/CODEOWNERS"
             "SECURITY.md"
             "CONTRIBUTING.md"
@@ -72,4 +74,3 @@ jobs:
             printf '%s\n' "$sensitive"
             exit 1
           fi
-
