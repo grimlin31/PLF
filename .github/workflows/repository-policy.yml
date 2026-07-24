@@ -1,0 +1,75 @@
+name: Política del repositorio PLF
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate-public-scope:
+    name: Validar alcance público
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el repositorio
+        uses: actions/checkout@v4
+
+      - name: Comprobar documentos obligatorios
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required_files=(
+            "README.md"
+            "AGENTS.md"
+            "Framework/00-MASTER-CONTEXT.md"
+            "Framework/07-COMMAND-PROTOCOL.md"
+            "Framework/08-FILE-SAFETY-POLICY.md"
+            "Framework/09-BOOTCAMP-BOOTSTRAP.md"
+            ".github/CODEOWNERS"
+            "SECURITY.md"
+            "CONTRIBUTING.md"
+          )
+
+          for file in "${required_files[@]}"; do
+            if [[ ! -f "$file" ]]; then
+              echo "::error file=$file::Falta un documento obligatorio del PLF público."
+              exit 1
+            fi
+          done
+
+      - name: Impedir la publicación de Bootcamps personales
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          unexpected="$(
+            git ls-files 'Bootcamps/*' |
+            grep -Ev '^Bootcamps/(README\.md|_template/)' || true
+          )"
+
+          if [[ -n "$unexpected" ]]; then
+            echo "::error::Se detectaron archivos de Bootcamps personales en el repositorio público:"
+            printf '%s\n' "$unexpected"
+            exit 1
+          fi
+
+      - name: Impedir secretos y archivos sensibles por nombre
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          sensitive="$(
+            git ls-files |
+            grep -Ei '(^|/)(\.env(\..*)?|credentials?|secrets?)(\.|$)|\.(pem|p12|pfx|key)$' || true
+          )"
+
+          if [[ -n "$sensitive" ]]; then
+            echo "::error::Se detectaron archivos cuyo nombre indica credenciales o secretos:"
+            printf '%s\n' "$sensitive"
+            exit 1
+          fi
+
