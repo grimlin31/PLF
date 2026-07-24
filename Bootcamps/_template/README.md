@@ -3,7 +3,7 @@
 **Bootcamp ID:** `[ID]`  
 **Version:** 1.0.0  
 **Status:** `NOT_STARTED`  
-**Framework version:** 1.1.0  
+**Framework version:** 1.2.0  
 **Target profession:** `[PROFESSION]`  
 **Target level:** `[LEVEL]`
 
@@ -20,6 +20,8 @@
 
 See `05-BOOTCAMP-STATE.md`.
 
+For the exact partial checkpoint, see `06-CURRENT-CHAPTER.md`.
+
 ## Curriculum
 
 See `04-CURRICULUM-MAP.md`.
@@ -32,6 +34,18 @@ Projects/   Integrating professional projects
 Interviews/ Role-specific preparation
 Assets/     Bootcamp-specific diagrams and media
 ```
+
+## Multi-device continuity
+
+When this instance is stored in a private Bootcamp repository:
+
+- `origin` points to the private repository;
+- `upstream` points to the public PLF;
+- `/sincronizar-capitulo` saves and publishes a partial checkpoint;
+- `/reanudar-capitulo` obtains the latest checkpoint safely;
+- `/estado-capitulo` reports progress without changing files.
+
+See `Framework/10-MULTI-DEVICE-SYNC.md`.
 
 ## Starting a session
 
