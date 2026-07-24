@@ -1,6 +1,6 @@
 # Bootcamps
 
-**Version:** 1.0.0  
+**Version:** 1.1.0  
 
 ## Project–folder convention
 
@@ -41,6 +41,7 @@ Bootcamp-Name/
 ├── 03-LEARNING-PROFILE.md
 ├── 04-CURRICULUM-MAP.md
 ├── 05-BOOTCAMP-STATE.md
+├── 06-CURRENT-CHAPTER.md
 ├── Chapters/
 ├── Projects/
 ├── Interviews/
@@ -55,8 +56,11 @@ Bootcamp-Name/
 - Each theory chapter has its own directory and chat or session.
 - Related laboratories use `X.1`, `X.2`, and subsequent numbering.
 - The Bootcamp State is the primary transfer document between sessions.
+- The Current Chapter checkpoint preserves an unfinished unit between devices.
 - Evidence paths must refer to artifacts inside the repository or to an explicitly documented external location.
 - Changes to the generic method belong in the Framework Changelog.
+- Personal Bootcamps are synchronized through independent private repositories,
+  never through public forks of the PLF.
 
 ## Creating a Bootcamp
 
