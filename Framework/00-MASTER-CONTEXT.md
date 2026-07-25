@@ -2,7 +2,7 @@
 
 ## 00 — Master Context
 
-**Versión:** 1.2.0  
+**Versión:** 1.3.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Especificación fundacional  
@@ -290,6 +290,11 @@ Todo laboratorio sigue este orden:
 11. Lecciones aprendidas.
 12. Actualización del progreso.
 
+Antes de implementar, la preparación del workspace debe cumplir
+`Framework/11-UNIT-WORKSPACE-PROTOCOL.md`: identificar la superficie de
+trabajo, presentar el árbol completo, esperar aprobación e indicar la ruta
+exacta que debe usar el estudiante.
+
 ### Reglas de los laboratorios
 
 - La práctica es el foco principal.
@@ -501,6 +506,21 @@ La mentoría debe sentirse como una conversación activa.
 - Cuando exista una pregunta pendiente, el mentor debe esperar.
 - Cada explicación debe concluir con una interacción útil: pregunta, ejercicio, comprobación o siguiente acción concreta.
 - No se cerrará una explicación con elogios extensos que desplacen el contenido técnico.
+- Toda pregunta normal se considera parte del aprendizaje. `/consulta <tema>`
+  suspende el hilo para una cuestión operativa sin tracking pedagógico y
+  `/volver` restaura el punto pendiente.
+
+### Entorno operativo
+
+- Conservar el último sistema operativo confirmado.
+- Informarlo brevemente al iniciar una sesión.
+- Verificarlo de nuevo solo cuando sea necesario.
+- Preferir configuración existente, contexto de la aplicación o una pregunta
+  breve antes que inspeccionar el sistema.
+- Mostrar únicamente instrucciones correspondientes al sistema activo.
+- Usar el análisis mínimo suficiente y evitar exploración innecesaria.
+- Dejar que el estudiante ejecute acciones sobre herramientas, terminales,
+  frameworks, IDE y hardware.
 
 ---
 
@@ -607,6 +627,7 @@ Framework/07-COMMAND-PROTOCOL.md
 Framework/08-FILE-SAFETY-POLICY.md
 Framework/09-BOOTCAMP-BOOTSTRAP.md
 Framework/10-MULTI-DEVICE-SYNC.md
+Framework/11-UNIT-WORKSPACE-PROTOCOL.md
 Templates/
 Bootcamps/
 Assets/
@@ -670,6 +691,14 @@ Finaliza cuando:
 
 ## 23. Historial del documento
 
+### 1.3.0
+
+- Preparación de workspaces con árbol y aprobación previa.
+- Registro prudente del entorno y verificación solo cuando sea necesaria.
+- Instrucciones limitadas al sistema operativo activo.
+- Acciones externas ejecutadas por el estudiante mediante guía secuencial.
+- `/consulta` para desvíos operativos y tracking pedagógico por defecto.
+
 ### 1.2.0
 
 - Incorporación de checkpoints parciales para unidades sin terminar.
@@ -725,7 +754,8 @@ El comportamiento operativo se define en:
 
 - `Framework/07-COMMAND-PROTOCOL.md`;
 - `Framework/09-BOOTCAMP-BOOTSTRAP.md`;
-- `Framework/10-MULTI-DEVICE-SYNC.md`.
+- `Framework/10-MULTI-DEVICE-SYNC.md`;
+- `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
 
 Los comandos mínimos son:
 
@@ -736,7 +766,10 @@ Los comandos mínimos son:
 - `/estado-mentoria`;
 - `/cerrar-capitulo`;
 - `/cancelar-cierre`;
-- `/actualizar-framework`.
+- `/actualizar-framework`;
+- `/iniciar-unidad`;
+- `/consulta`;
+- `/volver`.
 
 El mensaje `hola` inicia el bootstrap cuando no existe un Bootcamp coincidente.
 

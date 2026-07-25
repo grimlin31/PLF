@@ -2,8 +2,8 @@
 
 ## 07 — Protocolo de comandos
 
-**Versión:** 1.1.0  
-**Requiere PLF:** 1.2.0  
+**Versión:** 1.2.0
+**Requiere PLF:** 1.3.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -11,6 +11,72 @@
 Definir órdenes breves y deterministas para operar un Bootcamp sin depender de frases exactas. Los comandos no distinguen mayúsculas y aceptan tildes opcionales.
 
 ## 2. Comandos oficiales
+
+### `/iniciar-unidad`
+
+Alias naturales:
+
+- `iniciar capítulo`;
+- `iniciar laboratorio`;
+- `iniciar la unidad actual`;
+- `preparar proyecto técnico`;
+- `preparar capítulo`;
+- `preparar laboratorio`;
+- `crear el workspace`.
+
+Comportamiento:
+
+1. Resolver el Bootcamp y confirmar que la unidad coincide con
+   `current_focus`.
+2. Leer `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
+3. Cargar el entorno registrado sin inspeccionarlo de nuevo salvo necesidad.
+4. Determinar si el trabajo corresponde a chat, editor, IDE, terminal, hardware
+   o una combinación.
+5. Analizar artefactos existentes y preservar cambios del usuario.
+6. Mostrar el árbol completo, archivos afectados, ruta de trabajo,
+   prerrequisitos y acciones externas.
+7. Esperar aprobación explícita.
+8. Crear únicamente archivos internos aprobados.
+9. Verificar la estructura e informar dónde debe trabajar el estudiante.
+10. Guiar cualquier acción externa una por vez y esperar su resultado.
+
+No ejecuta generadores, instalaciones, gestores de paquetes, compilaciones,
+flasheos ni operaciones sobre IDE, SDK, frameworks o hardware.
+
+### `/consulta <tema>`
+
+Alias naturales:
+
+- `consulta de configuración`;
+- `pausar el hilo para configurar`;
+- `antes de continuar, necesito configurar`.
+
+Comportamiento:
+
+1. Conservar el punto, pregunta y siguiente acción pedagógicos.
+2. Abrir un desvío operativo sin tracking de aprendizaje.
+3. No avanzar la unidad ni modificar competencias.
+4. Registrar solamente una configuración o decisión persistente confirmada.
+5. Mantener disponible `/volver`.
+
+Las preguntas normales que no usan `/consulta` pertenecen al aprendizaje y se
+registran cuando producen contenido o evidencia relevante.
+
+### `/volver`
+
+Alias naturales:
+
+- `volver al capítulo`;
+- `retomar el hilo`;
+- `continuemos donde estábamos`.
+
+Comportamiento:
+
+1. Cerrar la consulta operativa.
+2. Resumir únicamente el resultado operativo útil.
+3. Restaurar el punto pedagógico suspendido.
+4. Repetir exactamente la pregunta pendiente, cuando exista.
+5. Esperar la respuesta antes de avanzar.
 
 ### `/iniciar-bootcamp`
 
@@ -127,6 +193,10 @@ Debe registrar:
 - artefactos activos;
 - tiempo confirmado;
 - fecha del checkpoint.
+
+Si existe una `/consulta` abierta, conservar además el tema operativo, el punto
+pedagógico suspendido y la acción de retorno. No convertir la consulta en
+progreso o evidencia.
 
 No debe:
 

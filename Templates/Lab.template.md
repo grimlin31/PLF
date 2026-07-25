@@ -3,7 +3,7 @@
 ## Chapter [X.Y] — Laboratory: [TITLE]
 
 **ID:** `CH-XX.Y-LAB`  
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** `PLANNED`  
 **Parent chapter:** `CH-XX`  
 **Type:** Practical laboratory  
@@ -42,6 +42,16 @@
 ### Materials
 
 - [Hardware, data or resource]
+
+### Workspace preparation
+
+- Working surface: `[CHAT | EDITOR | IDE | TERMINAL | HARDWARE | MIXED]`
+- Workspace manifest: `[PATH]/WORKSPACE.md`
+- Project root to open: `[PATH]/workspace/`
+- Environment verification required: `[YES | NO, with reason]`
+
+Before creating files, show the complete proposed tree, affected paths and
+student-executed external actions. Wait for explicit approval.
 
 ## 5. Constraints
 
@@ -156,6 +166,10 @@
 [Next laboratory, chapter, project or review.]
 
 ## 20. Document history
+
+### 1.1.0
+
+- Added approved workspace preparation and student-executed external setup.
 
 ### 1.0.0
 

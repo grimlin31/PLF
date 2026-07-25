@@ -3,7 +3,7 @@
 **Bootcamp ID:** `[ID]`  
 **Version:** 1.0.0  
 **Status:** `NOT_STARTED`  
-**Framework version:** 1.2.0  
+**Framework version:** 1.3.0
 **Target profession:** `[PROFESSION]`  
 **Target level:** `[LEVEL]`
 
@@ -35,6 +35,11 @@ Interviews/ Role-specific preparation
 Assets/     Bootcamp-specific diagrams and media
 ```
 
+Practical units place their approved working project under a unit-specific
+`workspace/` directory. Before creating it, the assistant shows the complete
+tree and waits for approval. External tools are operated by the student through
+one guided action at a time.
+
 ## Multi-device continuity
 
 When this instance is stored in a private Bootcamp repository:
@@ -46,6 +51,12 @@ When this instance is stored in a private Bootcamp repository:
 - `/estado-capitulo` reports progress without changing files.
 
 See `Framework/10-MULTI-DEVICE-SYNC.md`.
+
+## Runtime environment
+
+The last confirmed operating system is stored in `00-BOOTCAMP-CONFIG.md`.
+Report it briefly at session start and verify it again only when the active
+unit requires it, the device changes or a contradiction appears.
 
 ## Starting a session
 

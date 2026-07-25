@@ -2,8 +2,8 @@
 
 ## 09 — Bootstrap conversacional de Bootcamps
 
-**Versión:** 1.1.0  
-**Requiere PLF:** 1.2.0  
+**Versión:** 1.2.0
+**Requiere PLF:** 1.3.0
 **Estado:** Aprobado
 
 ## 1. Objetivo
@@ -58,6 +58,11 @@ Preguntar una cosa a la vez y adaptar preguntas posteriores para no repetir info
 12. Modo de persistencia:
     - solo local;
     - repositorio privado para sincronización entre dispositivos.
+13. Entorno operativo conocido:
+    - sistema operativo actual;
+    - editor o IDE preferido, si existe;
+    - preguntar solo cuando esta información no esté disponible o sea
+      necesaria para el roadmap.
 
 Si se elige repositorio privado, solicitar únicamente:
 
@@ -82,6 +87,10 @@ El asistente puede proponer:
 - estructura de archivos.
 
 Debe distinguir propuesta de dato confirmado.
+
+No se inspeccionará el sistema para obtener información que el estudiante
+pueda confirmar de forma más sencilla. El entorno se vuelve a verificar solo
+cuando una unidad lo requiere o aparece una contradicción.
 
 ## 5. Confirmación
 
@@ -121,6 +130,10 @@ Tras aprobación:
 4. Establecer `current_focus`.
 5. Verificar estructura y coherencia.
 6. Informar qué se creó.
+
+La creación del Bootcamp no ejecuta generadores, instalaciones ni
+configuraciones de herramientas externas. Cada unidad práctica aplica
+`Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
 
 Si se aprobó sincronización privada:
 

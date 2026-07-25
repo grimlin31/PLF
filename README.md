@@ -1,6 +1,6 @@
 # Professional Learning Framework (PLF)
 
-**Versión:** 1.2.0  
+**Versión:** 1.3.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Documento Fundacional
@@ -294,11 +294,25 @@ Las instrucciones de ejecución se encuentran en:
 - `AGENTS.md`;
 - `Framework/07-COMMAND-PROTOCOL.md`;
 - `Framework/08-FILE-SAFETY-POLICY.md`;
-- `Framework/09-BOOTCAMP-BOOTSTRAP.md`.
-- `Framework/10-MULTI-DEVICE-SYNC.md`.
+- `Framework/09-BOOTCAMP-BOOTSTRAP.md`;
+- `Framework/10-MULTI-DEVICE-SYNC.md`;
+- `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
 
 Durante una unidad normal solo puede escribirse en el Bootcamp cuyo nombre
 coincide con el Project.
+
+### Entornos y workspaces
+
+El PLF conserva el último sistema operativo confirmado y solo lo vuelve a
+verificar cuando una unidad depende de él, el estudiante cambia de dispositivo
+o aparece una contradicción. Las instrucciones operativas se limitan al sistema
+activo.
+
+Antes de crear archivos para una unidad, el asistente presenta el árbol
+completo, las rutas y las acciones externas necesarias. La creación requiere
+aprobación explícita. Generadores, instaladores, compilaciones, flasheos y
+herramientas externas son ejecutados por el estudiante mediante instrucciones
+de una acción por vez.
 
 ### Sincronización entre computadores
 

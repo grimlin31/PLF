@@ -3,7 +3,7 @@
 ## Chapter [X] — [TITLE]
 
 **ID:** `CH-XX`  
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** `PLANNED`  
 **Type:** Theory chapter  
 **Estimated effort:** [MIN–MAX HOURS]  
@@ -26,6 +26,19 @@
 ## 4. Required prior knowledge
 
 - [Prerequisite]
+
+## 4.1 Workspace decision
+
+```yaml
+workspace:
+  required: false
+  primary_surface: "CHAT"
+  path: null
+  environment_verification_required: false
+```
+
+If practical artifacts are required, present their complete proposed tree and
+wait for approval before creating them.
 
 ## 5. Concepts
 
@@ -128,6 +141,10 @@
 **Reason:** [Dependency or progression]
 
 ## 17. Document history
+
+### 1.1.0
+
+- Added explicit workspace and working-surface decision.
 
 ### 1.0.0
 

@@ -1,6 +1,6 @@
 # Current Chapter Checkpoint
 
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** `NOT_STARTED`  
 **Bootcamp:** `POR DEFINIR`  
 **Last updated:** `POR DEFINIR`
@@ -28,6 +28,30 @@ artifacts:
   exercises: []
   code: []
   evidence: []
+```
+
+## Workspace
+
+```yaml
+workspace:
+  preparation_status: "NOT_REQUIRED | PROPOSED | APPROVED | READY | BLOCKED"
+  primary_surface: "CHAT | EDITOR | IDE | TERMINAL | HARDWARE | MIXED"
+  manifest: null
+  relative_path: null
+  absolute_path: null
+  open_target: null
+  environment_verification_required: false
+```
+
+## Dialogue
+
+```yaml
+dialogue:
+  mode: "LEARNING | CONSULTATION"
+  consultation_topic: null
+  suspended_current_point: null
+  suspended_pending_question: null
+  resume_action: null
 ```
 
 ## Confirmed session time

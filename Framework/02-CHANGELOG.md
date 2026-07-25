@@ -2,7 +2,7 @@
 
 ## 02 — Changelog
 
-**Versión:** 1.2.0  
+**Versión:** 1.3.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Registro oficial de cambios  
@@ -470,9 +470,71 @@ change:
   evidence_or_decision_reference: "Solicitud explícita de continuidad entre dos computadores."
 ```
 
+### CHG-0013 — Entornos y workspaces de unidades
+
+```yaml
+change:
+  id: "CHG-0013"
+  title: "Entornos y workspaces de unidades"
+  status: "IMPLEMENTED"
+  type: "MINOR"
+  proposed_at: "2026-07-25"
+  approved_at: "2026-07-25"
+  implemented_at: "2026-07-25"
+  effective_from: "PLF 1.3.0"
+  requested_by: "Estudiante"
+  reason: "Preparar unidades prácticas de forma agnóstica, predecible y con mínima intervención sobre el sistema."
+  description: "Se registra el último entorno confirmado, se verifica solo cuando es necesario, se exige árbol y aprobación antes de crear un workspace, las acciones externas quedan en manos del estudiante y /consulta separa cuestiones operativas del tracking pedagógico."
+  affected_documents:
+    - "AGENTS.md"
+    - "README.md"
+    - "Framework/00-MASTER-CONTEXT.md"
+    - "Framework/02-CHANGELOG.md"
+    - "Framework/07-COMMAND-PROTOCOL.md"
+    - "Framework/08-FILE-SAFETY-POLICY.md"
+    - "Framework/09-BOOTCAMP-BOOTSTRAP.md"
+    - "Framework/11-UNIT-WORKSPACE-PROTOCOL.md"
+    - "Templates/Chapter.template.md"
+    - "Templates/Lab.template.md"
+    - "Templates/Project.template.md"
+    - "Templates/Workspace.template.md"
+    - "Bootcamps/_template/README.md"
+    - "Bootcamps/_template/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/_template/06-CURRENT-CHAPTER.md"
+    - "Bootcamps/Embedded Systems Bootcamp/README.md"
+    - "Bootcamps/Embedded Systems Bootcamp/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/Embedded Systems Bootcamp/06-CURRENT-CHAPTER.md"
+  affected_bootcamps:
+    - "Embedded Systems Bootcamp"
+  backward_compatible: true
+  migration_required: true
+  migration_notes: "El laboratorio 5.1 adopta únicamente la preparación de workspace porque todavía no se creó su estructura; la secuencia pedagógica y su progreso permanecen sin cambios."
+  evidence_or_decision_reference: "Solicitud y aprobación explícitas del estudiante el 2026-07-25."
+```
+
 ---
 
 ## 7. Versiones publicadas
+
+### PLF 1.3.0 — Unit Environments and Workspaces
+
+**Estado:** `IMPLEMENTED`
+**Fecha de aprobación:** 2026-07-25
+**Compatibilidad:** Compatible; requiere migración para registrar entorno y workspace
+
+#### Cambios
+
+- Sistema operativo persistente y verificación solo cuando sea necesaria.
+- Instrucciones limitadas al sistema operativo activo.
+- Árbol completo y aprobación previa para estructuras de unidades.
+- Acciones externas ejecutadas por el estudiante mediante guía secuencial.
+- Convenciones de ubicación para capítulos, laboratorios y proyectos.
+- `/iniciar-unidad`, `/consulta` y `/volver`.
+- Tracking pedagógico por defecto para preguntas normales.
+
+#### Documento implementado
+
+- `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`
 
 ### PLF 1.2.0 — Private Multi-Device Continuity
 
@@ -632,6 +694,13 @@ Antes de publicar una versión se debe comprobar:
 ---
 
 ## 12. Historial del documento
+
+### 1.3.0
+
+- Registro del protocolo de entornos y workspaces.
+- Registro de aprobación previa de árboles.
+- Registro de ejecución externa dirigida por el estudiante.
+- Publicación de PLF 1.3.0.
 
 ### 1.2.0
 

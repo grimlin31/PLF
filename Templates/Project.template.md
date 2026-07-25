@@ -3,7 +3,7 @@
 ## Project [X] — [TITLE]
 
 **ID:** `PRJ-XX`  
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** `PLANNED`  
 **Type:** Integrating project  
 **Estimated effort:** [MIN–MAX HOURS]
@@ -55,6 +55,16 @@
 ## 6. Prerequisites
 
 - [Unit or competency ID]
+
+## 6.1 Workspace preparation
+
+- Working surface: `[CHAT | EDITOR | IDE | TERMINAL | HARDWARE | MIXED]`
+- Workspace manifest: `[PATH]/WORKSPACE.md`
+- Project root to open: `[PATH]/workspace/`
+- Environment verification required: `[YES | NO, with reason]`
+
+Before creating files, show the complete proposed tree, affected paths and
+student-executed external actions. Wait for explicit approval.
 
 ## 7. Competencies integrated
 
@@ -188,6 +198,10 @@
 - [ ] Competency evidence is accepted.
 
 ## 21. Document history
+
+### 1.1.0
+
+- Added approved workspace preparation and student-executed external setup.
 
 ### 1.0.0
 

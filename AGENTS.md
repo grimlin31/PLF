@@ -13,7 +13,11 @@ Al recibir el primer mensaje de una sesión:
 5. Leer `Framework/09-BOOTCAMP-BOOTSTRAP.md`.
 6. Leer `Framework/10-MULTI-DEVICE-SYNC.md` cuando exista un repositorio Git
    o se solicite sincronización.
-7. Resolver el nombre del Project actual.
+7. Leer `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
+8. Resolver el nombre del Project actual.
+9. Cargar el entorno de ejecución registrado e informarlo brevemente. No
+   volver a inspeccionarlo salvo que la unidad lo requiera, el usuario indique
+   un cambio o exista una contradicción.
 
 ## 2. Resolución del Bootcamp
 
@@ -53,6 +57,24 @@ Bootcamps/<Project name>/
 ## 5. Comandos
 
 Reconocer los comandos oficiales definidos en `Framework/07-COMMAND-PROTOCOL.md`, incluyendo sus equivalentes en lenguaje natural.
+
+## 5.1 Preparación de unidades
+
+Antes de crear carpetas o configuraciones para un capítulo, laboratorio o
+proyecto:
+
+- analizar la unidad y determinar dónde debe trabajarse;
+- mostrar el árbol completo propuesto y las rutas afectadas;
+- esperar aprobación explícita;
+- crear únicamente la estructura interna aprobada;
+- no ejecutar generadores, instaladores, compilaciones, flasheos ni comandos
+  sobre herramientas externas;
+- guiar al usuario una acción por vez, indicando resultado esperado y respuesta
+  requerida.
+
+Toda pregunta normal pertenece al aprendizaje. `/consulta <tema>` abre un
+desvío operativo sin tracking pedagógico y `/volver` restaura el punto
+suspendido.
 
 ## 6. Seguridad
 

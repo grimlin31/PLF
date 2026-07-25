@@ -2,8 +2,8 @@
 
 ## 08 — Política de seguridad de archivos
 
-**Versión:** 1.1.0  
-**Requiere PLF:** 1.2.0  
+**Versión:** 1.2.0
+**Requiere PLF:** 1.3.0
 **Estado:** Aprobado
 
 ## 1. Principio de mínimo alcance
@@ -101,9 +101,28 @@ Antes de una operación estructural:
 2. comprobar que permanecen dentro de la raíz;
 3. identificar impacto;
 4. comprobar colisiones;
-5. solicitar aprobación;
-6. preferir operaciones recuperables;
-7. verificar después.
+5. mostrar el árbol completo propuesto;
+6. enumerar archivos nuevos y existentes afectados;
+7. solicitar aprobación explícita;
+8. preferir operaciones recuperables;
+9. verificar después.
+
+La aprobación de un árbol no autoriza elementos que no aparecían en la
+propuesta.
+
+### 9.1 Herramientas y entornos externos
+
+El asistente no ejecuta generadores, instaladores, gestores de paquetes,
+compilaciones, flasheos ni configuraciones de SDK, IDE, frameworks o hardware.
+
+Debe proporcionar al estudiante una sola acción por vez, con:
+
+- ruta exacta;
+- propósito;
+- resultado esperado;
+- respuesta requerida.
+
+Una descarga, instalación o cambio global requiere autorización específica.
 
 ## 10. Control de versiones
 
@@ -187,6 +206,7 @@ Detener la escritura cuando:
 - una ruta protegida parece necesaria sin autorización;
 - el cambio destruiría información;
 - falta una decisión material del estudiante;
+- la estructura de una unidad todavía no fue aprobada;
 - `origin` no coincide con el repositorio privado configurado;
 - `origin` apunta al PLF público;
 - otro dispositivo publicó cambios no incorporados;

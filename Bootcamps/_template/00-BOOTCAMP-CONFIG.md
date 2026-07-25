@@ -2,9 +2,9 @@
 
 ## Bootcamp Configuration
 
-**Version:** 1.1.0  
+**Version:** 1.2.0
 **Status:** `DRAFT`  
-**Framework version:** 1.2.0
+**Framework version:** 1.3.0
 
 ```yaml
 bootcamp:
@@ -58,6 +58,18 @@ repository:
   framework_repository: "https://github.com/grimlin31/PLF.git"
   allow_direct_checkpoint_push: true
   allow_force_push: false
+
+runtime_preferences:
+  preferred_editor_or_ide: "POR DEFINIR"
+  external_actions_executed_by: "STUDENT"
+
+runtime_environment:
+  operating_system: "POR DEFINIR"
+  version: "POR DEFINIR"
+  architecture_observed: "POR DEFINIR"
+  confirmation_source: "USER | APP_CONTEXT | READ_ONLY_INSPECTION"
+  status: "UNKNOWN | DECLARED | CONFIRMED"
+  recheck_required: false
 ```
 
 ## Approval
