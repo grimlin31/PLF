@@ -2,8 +2,8 @@
 
 ## 08 — Política de seguridad de archivos
 
-**Versión:** 1.3.0
-**Requiere PLF:** 1.4.0
+**Versión:** 1.4.0
+**Requiere PLF:** 1.5.0
 **Estado:** Aprobado
 
 ## 1. Principio de mínimo alcance
@@ -112,10 +112,19 @@ propuesta.
 
 ### 9.1 Herramientas y entornos externos
 
-El asistente no ejecuta generadores, instaladores, gestores de paquetes,
-compilaciones, flasheos ni configuraciones de SDK, IDE, frameworks o hardware.
+La aprobación explícita del árbol y del plan de setup autoriza generadores,
+instaladores, gestores de paquetes, compilaciones y configuraciones dentro del
+alcance enumerado.
 
-Debe proporcionar bloques seguros basados en dependencias, con:
+Antes de instalar:
+
+- consultar el registro compartido;
+- verificar si la herramienta ya existe y es compatible;
+- preferir alcance local o versionado cuando afecte reproducibilidad;
+- limitar instalaciones globales a herramientas compartidas indispensables;
+- informar cambios globales y no registrar secretos.
+
+Cuando la intervención corresponda al estudiante, proporcionar bloques seguros:
 
 - ruta exacta;
 - propósito;
@@ -127,7 +136,17 @@ No se agrupan acciones si una salida intermedia exige una decisión. Un comando
 sin salida no exige una confirmación vacía. No se declara un entorno `READY`
 sin evidencia y no se registran secretos en el manifiesto.
 
-Una descarga, instalación o cambio global requiere autorización específica.
+Una descarga o cambio global incluido expresamente en el plan queda autorizado
+por su aprobación. Cualquier ampliación requiere nueva autorización.
+
+### 9.2 Integridad de implementación práctica
+
+- No escribir silenciosamente la solución que demuestra una competencia.
+- Separar configuración automatizable de lógica pedagógica.
+- Registrar el nivel de ayuda y la autoría real.
+- No atribuir al estudiante código generado por el asistente.
+- Corregir directamente bugs operativos solo cuando no sean el objetivo.
+- Enseñar bugs transferibles o pertinentes mediante diagnóstico guiado.
 
 ## 10. Control de versiones
 

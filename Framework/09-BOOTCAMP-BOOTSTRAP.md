@@ -2,8 +2,8 @@
 
 ## 09 — Bootstrap conversacional de Bootcamps
 
-**Versión:** 1.2.0
-**Requiere PLF:** 1.3.0
+**Versión:** 1.3.0
+**Requiere PLF:** 1.5.0
 **Estado:** Aprobado
 
 ## 1. Objetivo
@@ -123,6 +123,7 @@ Tras aprobación:
    - `04-CURRICULUM-MAP.md`;
    - `05-BOOTCAMP-STATE.md`;
    - `06-CURRENT-CHAPTER.md`;
+   - `07-ENVIRONMENT-REGISTRY.md`;
    - `Chapters/`;
    - `Projects/`;
    - `Interviews/`;
@@ -133,7 +134,8 @@ Tras aprobación:
 
 La creación del Bootcamp no ejecuta generadores, instalaciones ni
 configuraciones de herramientas externas. Cada unidad práctica aplica
-`Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
+`Framework/11-UNIT-WORKSPACE-PROTOCOL.md` y
+`Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
 
 Si se aprobó sincronización privada:
 

@@ -1,6 +1,6 @@
 # Current Chapter Checkpoint
 
-**Version:** 1.2.0
+**Version:** 1.3.0
 **Status:** `NOT_STARTED`  
 **Bootcamp:** `POR DEFINIR`  
 **Last updated:** `POR DEFINIR`
@@ -44,6 +44,10 @@ workspace:
   readiness_status: "NOT_ASSESSED | SETUP_REQUIRED | CONFIGURING | BLOCKED | READY_WITH_LIMITATIONS | READY"
   readiness_blockers: []
   accepted_limitations: []
+  setup_executor: "ASSISTANT | GUIDED_STUDENT | STUDENT_REQUIRED"
+  configuration_learning_status: "NOT_TAUGHT | GUIDED | DEMONSTRATED | MASTERED | NOT_REQUIRED"
+  implementation_mode: "STUDENT_AUTHORED"
+  assistance_level: "QUESTION | HINT | API_GUIDANCE | PSEUDOCODE | INCOMPLETE_FRAGMENT | LOCAL_CORRECTION | REFERENCE_SOLUTION"
 ```
 
 ## Dialogue
