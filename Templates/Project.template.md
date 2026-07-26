@@ -62,9 +62,13 @@
 - Workspace manifest: `[PATH]/WORKSPACE.md`
 - Project root to open: `[PATH]/workspace/`
 - Environment verification required: `[YES | NO, with reason]`
+- Environment readiness: `[NOT_ASSESSED | SETUP_REQUIRED | CONFIGURING | BLOCKED | READY_WITH_LIMITATIONS | READY]`
 
 Before creating files, show the complete proposed tree, affected paths and
 student-executed external actions. Wait for explicit approval.
+After creation, group safe setup commands, verify the applicable toolchain,
+dependencies, references, editor diagnostics and smoke checks, and do not begin
+implementation before the readiness gate passes.
 
 ## 7. Competencies integrated
 

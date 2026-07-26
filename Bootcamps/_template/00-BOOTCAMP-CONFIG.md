@@ -2,9 +2,9 @@
 
 ## Bootcamp Configuration
 
-**Version:** 1.2.0
+**Version:** 1.3.0
 **Status:** `DRAFT`  
-**Framework version:** 1.3.0
+**Framework version:** 1.4.0
 
 ```yaml
 bootcamp:
@@ -62,6 +62,8 @@ repository:
 runtime_preferences:
   preferred_editor_or_ide: "POR DEFINIR"
   external_actions_executed_by: "STUDENT"
+  setup_instruction_mode: "DEPENDENCY_AWARE_BLOCKS"
+  require_environment_readiness_gate: true
 
 runtime_environment:
   operating_system: "POR DEFINIR"

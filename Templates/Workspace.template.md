@@ -1,7 +1,7 @@
 # [UNIT TITLE] — Workspace
 
 **Unit:** `[UNIT ID]`
-**Status:** `PROPOSED | APPROVED | READY | BLOCKED`
+**Status:** `PROPOSED | APPROVED | CONFIGURING | READY_WITH_LIMITATIONS | READY | BLOCKED`
 **Last verified:** `[DATE]`
 
 ## Working surface
@@ -38,8 +38,29 @@ environment:
 
 ## Student-executed setup
 
-For each step provide one action, its expected result and the exact response
-required before continuing.
+Group independent actions into the largest safe block. Record purpose,
+location, dependencies, expected and unacceptable results, evidence and the
+condition that requires a response.
+
+## Environment readiness
+
+```yaml
+readiness:
+  status: "NOT_ASSESSED | SETUP_REQUIRED | CONFIGURING | BLOCKED | READY_WITH_LIMITATIONS | READY"
+  required_checks: []
+  completed_checks: []
+  blockers: []
+  limitations: []
+  verified_versions: {}
+  verified_at: null
+  evidence_source: "STUDENT_REPORTED | EXISTING_VALID_EVIDENCE | NOT_VERIFIED"
+```
+
+## Setup blocks
+
+| Block | Objective | Dependency | Status | Evidence or failure |
+|---|---|---|---|---|
+| `SETUP-01` | [Objective] | [NONE or block] | `PENDING` | [Evidence] |
 
 ## Generated or local-only content
 
@@ -51,3 +72,7 @@ required before continuing.
 - [ ] Working path was reported.
 - [ ] External actions remain student-executed.
 - [ ] Operating-system instructions match the active environment.
+- [ ] Toolchain, dependencies and project references are resolved.
+- [ ] Editor or IDE diagnostics applicable to the unit are working.
+- [ ] Linter, build, tests or smoke check applicable to the unit passed.
+- [ ] No implementation began before the readiness gate.

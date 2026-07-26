@@ -69,8 +69,12 @@ proyecto:
 - crear únicamente la estructura interna aprobada;
 - no ejecutar generadores, instaladores, compilaciones, flasheos ni comandos
   sobre herramientas externas;
-- guiar al usuario una acción por vez, indicando resultado esperado y respuesta
-  requerida.
+- analizar dependencias y entregar el mayor bloque seguro de acciones;
+- indicar resultados esperados, variantes normales y señales de error;
+- esperar respuesta solo ante dependencias, decisiones, fallos o evidencia
+  necesaria; no pedir `listo` por comandos sin salida;
+- no iniciar la implementación práctica hasta que el entorno esté `READY` o el
+  usuario acepte un estado `READY_WITH_LIMITATIONS`.
 
 Toda pregunta normal pertenece al aprendizaje. `/consulta <tema>` abre un
 desvío operativo sin tracking pedagógico y `/volver` restaura el punto

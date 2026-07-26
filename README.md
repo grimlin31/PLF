@@ -1,6 +1,6 @@
 # Professional Learning Framework (PLF)
 
-**Versión:** 1.3.0
+**Versión:** 1.4.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Documento Fundacional
@@ -311,8 +311,13 @@ activo.
 Antes de crear archivos para una unidad, el asistente presenta el árbol
 completo, las rutas y las acciones externas necesarias. La creación requiere
 aprobación explícita. Generadores, instaladores, compilaciones, flasheos y
-herramientas externas son ejecutados por el estudiante mediante instrucciones
-de una acción por vez.
+herramientas externas son ejecutados por el estudiante mediante bloques
+seguros agrupados por dependencias.
+
+Un laboratorio o proyecto no inicia su implementación práctica hasta verificar
+las herramientas, dependencias, referencias, editor o IDE y comprobaciones
+aplicables. El estado requerido es `READY`, o `READY_WITH_LIMITATIONS` después
+de una aceptación explícita.
 
 ### Sincronización entre computadores
 
