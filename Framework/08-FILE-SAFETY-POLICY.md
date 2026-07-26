@@ -2,8 +2,8 @@
 
 ## 08 — Política de seguridad de archivos
 
-**Versión:** 1.2.0
-**Requiere PLF:** 1.3.0
+**Versión:** 1.3.0
+**Requiere PLF:** 1.4.0
 **Estado:** Aprobado
 
 ## 1. Principio de mínimo alcance
@@ -115,12 +115,17 @@ propuesta.
 El asistente no ejecuta generadores, instaladores, gestores de paquetes,
 compilaciones, flasheos ni configuraciones de SDK, IDE, frameworks o hardware.
 
-Debe proporcionar al estudiante una sola acción por vez, con:
+Debe proporcionar bloques seguros basados en dependencias, con:
 
 - ruta exacta;
 - propósito;
-- resultado esperado;
-- respuesta requerida.
+- resultado esperado y variantes normales;
+- resultados que no deberían aparecer;
+- respuesta requerida solo cuando determine el siguiente paso.
+
+No se agrupan acciones si una salida intermedia exige una decisión. Un comando
+sin salida no exige una confirmación vacía. No se declara un entorno `READY`
+sin evidencia y no se registran secretos en el manifiesto.
 
 Una descarga, instalación o cambio global requiere autorización específica.
 

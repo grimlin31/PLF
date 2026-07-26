@@ -2,8 +2,8 @@
 
 ## 07 — Protocolo de comandos
 
-**Versión:** 1.2.0
-**Requiere PLF:** 1.3.0
+**Versión:** 1.3.0
+**Requiere PLF:** 1.4.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -38,10 +38,18 @@ Comportamiento:
 7. Esperar aprobación explícita.
 8. Crear únicamente archivos internos aprobados.
 9. Verificar la estructura e informar dónde debe trabajar el estudiante.
-10. Guiar cualquier acción externa una por vez y esperar su resultado.
+10. Seleccionar las comprobaciones de preparación aplicables.
+11. Agrupar acciones externas independientes y detenerse solo en dependencias,
+    decisiones, errores o verificaciones necesarias.
+12. Registrar evidencia y no comenzar la implementación hasta alcanzar
+    `READY` o aceptar explícitamente `READY_WITH_LIMITATIONS`.
 
 No ejecuta generadores, instalaciones, gestores de paquetes, compilaciones,
 flasheos ni operaciones sobre IDE, SDK, frameworks o hardware.
+
+Cada bloque indica objetivo, ruta, comandos, resultado esperado, variantes
+normales, resultados incorrectos y qué debe compartirse si falla. Un comando
+sin salida no exige responder `listo`.
 
 ### `/consulta <tema>`
 

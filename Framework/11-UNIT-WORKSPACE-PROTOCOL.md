@@ -2,8 +2,8 @@
 
 ## 11 — Protocolo de entorno y workspace de unidades
 
-**Versión:** 1.0.0
-**Requiere PLF:** 1.3.0
+**Versión:** 1.1.0
+**Requiere PLF:** 1.4.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -138,15 +138,35 @@ El asistente no ejecutará:
 - comandos de configuración de SDK o frameworks;
 - acciones sobre hardware o aplicaciones externas.
 
-Para cada acción externa:
+Antes de proporcionar acciones externas, el asistente debe separar:
 
-1. explicar el objetivo;
-2. indicar la carpeta exacta;
-3. proporcionar un solo comando o acción por vez;
-4. describir el resultado esperado;
-5. indicar exactamente qué debe responder el estudiante;
-6. esperar el resultado;
-7. analizarlo antes de continuar.
+- comandos independientes y de solo lectura;
+- acciones modificadoras que comparten un objetivo y pueden verificarse juntas;
+- acciones dependientes que solo pueden continuar si la anterior tuvo éxito;
+- puntos de decisión que requieren analizar una salida antes de continuar.
+
+Debe entregar el mayor bloque seguro que no requiera una decisión intermedia.
+No se espera respuesta entre comandos independientes. Los comandos dependientes
+pueden usar ejecución condicional para detener el bloque ante el primer fallo.
+
+Cada bloque debe indicar:
+
+1. objetivo;
+2. carpeta exacta;
+3. comandos o acciones en orden;
+4. dependencias internas y punto de detención;
+5. resultado esperado y variantes normales;
+6. resultados que no deberían aparecer;
+7. qué hacer si todo sale bien;
+8. qué salida concreta compartir si falla.
+
+Solo se espera respuesta cuando el resultado determine el siguiente paso,
+exista una decisión, aparezca un error, se necesite evidencia o la acción
+siguiente produzca un cambio relevante.
+
+Si un comando exitoso normalmente no devuelve salida, no se solicita
+`listo`. Se agrupa con una comprobación posterior cuando sea posible; si no
+existe una comprobación útil, el estudiante continúa sin responder.
 
 Formato:
 
@@ -160,14 +180,64 @@ Ejecuta:
 Resultado esperado:
 [resultado]
 
-Respóndeme con:
-[salida, error o confirmación requerida]
+Si todo sale bien:
+[continuar sin responder o respuesta concreta requerida]
+
+Si algo falla:
+[salida concreta que debe compartirse y punto donde detenerse]
 ```
 
 Las instalaciones, descargas o cambios globales requieren autorización
 específica aunque sean un prerrequisito.
 
-## 8. Preparación de una unidad
+## 8. Puerta de preparación del entorno
+
+Un laboratorio o proyecto puede quedar creado o aprobado, pero su
+implementación práctica no comienza hasta alcanzar:
+
+- `READY`; o
+- `READY_WITH_LIMITATIONS`, después de que el estudiante acepte limitaciones
+  documentadas.
+
+Estados:
+
+```text
+NOT_ASSESSED
+SETUP_REQUIRED
+CONFIGURING
+BLOCKED
+READY_WITH_LIMITATIONS
+READY
+```
+
+Según la tecnología y la unidad, el análisis seleccionará únicamente las
+comprobaciones aplicables:
+
+1. sistema operativo relevante y ruta exacta;
+2. runtime, SDK, compilador o toolchain y versiones;
+3. inicialización local del proyecto;
+4. manifiestos, archivos de bloqueo y dependencias resueltas;
+5. variables de entorno y rutas, sin registrar secretos;
+6. configuración del editor o IDE y extensiones requeridas;
+7. servidor de lenguaje, IntelliSense, referencias e include paths;
+8. linter y formateador;
+9. scripts o sistema de build y descubrimiento de pruebas;
+10. compilación mínima, prueba de humo o ejecución mínima;
+11. target, placa, puerto, drivers o permisos cuando corresponda;
+12. reproducibilidad y reapertura del editor cuando sea necesaria.
+
+No se marca una comprobación como superada sin salida compartida, confirmación
+verificable o evidencia existente todavía válida. `WORKSPACE.md` registra las
+versiones, bloques ejecutados, verificaciones, bloqueos y limitaciones.
+
+Un fallo de configuración se resuelve antes de escribir la implementación
+práctica. Se diagnostica por bloques y se detiene únicamente donde una salida
+sea necesaria para elegir la corrección.
+
+La preparación es operativa y no eleva competencias, salvo que configurar la
+herramienta sea un objetivo explícito de aprendizaje.
+
+## 9. Preparación de una unidad
 
 1. Resolver el Bootcamp y `current_focus`.
 2. Leer los requisitos de la unidad.
@@ -180,9 +250,12 @@ específica aunque sean un prerrequisito.
 9. Crear solo archivos internos aprobados.
 10. Verificar estructura, rutas y alcance.
 11. Informar dónde debe trabajar el estudiante.
-12. Guiar las acciones externas una por una.
+12. Definir las comprobaciones de preparación aplicables.
+13. Guiar las acciones externas en bloques seguros según sus dependencias.
+14. Registrar evidencia y resolver bloqueos.
+15. Declarar `READY` o solicitar aceptación de limitaciones antes de implementar.
 
-## 9. Consultas y tracking
+## 10. Consultas y tracking
 
 Toda pregunta normal se considera parte del aprendizaje y se registra cuando
 produce conceptos, correcciones, decisiones técnicas o evidencia relevantes.
@@ -211,12 +284,15 @@ Si `/sincronizar-capitulo` se ejecuta durante una consulta, el checkpoint
 conserva el punto de retorno y cualquier configuración confirmada, pero no
 atribuye progreso pedagógico.
 
-## 10. Límites
+## 11. Límites
 
 - No asumir que el sistema operativo coincide con un dispositivo anterior.
 - No convertir información observada en hardware físico no verificado.
 - No crear estructuras sin aprobación.
 - No ejecutar acciones externas en nombre del estudiante.
 - No instalar dependencias implícitamente.
+- No iniciar implementación práctica sin superar la puerta de preparación.
+- No declarar `READY` sin evidencia.
+- No agrupar acciones cuando una salida intermedia determine el siguiente paso.
 - No duplicar workspaces para evitar una incompatibilidad sin aprobación.
 - No registrar una consulta operativa como evidencia de aprendizaje.

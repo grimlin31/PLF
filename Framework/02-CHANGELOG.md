@@ -2,7 +2,7 @@
 
 ## 02 — Changelog
 
-**Versión:** 1.3.0
+**Versión:** 1.4.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Registro oficial de cambios  
@@ -514,7 +514,67 @@ change:
 
 ---
 
+### CHG-0014 — Puerta de preparación y bloques de configuración
+
+```yaml
+change:
+  id: "CHG-0014"
+  title: "Puerta de preparación y bloques de configuración"
+  status: "IMPLEMENTED"
+  type: "MINOR"
+  proposed_at: "2026-07-26"
+  approved_at: "2026-07-26"
+  implemented_at: "2026-07-26"
+  effective_from: "PLF 1.4.0"
+  requested_by: "Estudiante"
+  reason: "Evitar que la práctica comience con dependencias, referencias, IntelliSense, linter, compilación o integración del entorno todavía sin resolver."
+  description: "Se incorpora una puerta de preparación verificable y se reemplaza la guía rígida de una acción por vez por bloques seguros según dependencias, sin ejecutar herramientas externas en nombre del estudiante."
+  affected_documents:
+    - "AGENTS.md"
+    - "README.md"
+    - "Framework/00-MASTER-CONTEXT.md"
+    - "Framework/02-CHANGELOG.md"
+    - "Framework/07-COMMAND-PROTOCOL.md"
+    - "Framework/08-FILE-SAFETY-POLICY.md"
+    - "Framework/11-UNIT-WORKSPACE-PROTOCOL.md"
+    - "Templates/Lab.template.md"
+    - "Templates/Project.template.md"
+    - "Templates/Workspace.template.md"
+    - "Bootcamps/_template/README.md"
+    - "Bootcamps/_template/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/_template/06-CURRENT-CHAPTER.md"
+    - "Bootcamps/Embedded Systems Bootcamp/README.md"
+    - "Bootcamps/Embedded Systems Bootcamp/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/Embedded Systems Bootcamp/05-BOOTCAMP-STATE.md"
+    - "Bootcamps/Embedded Systems Bootcamp/06-CURRENT-CHAPTER.md"
+  affected_bootcamps:
+    - "Embedded Systems Bootcamp"
+  backward_compatible: true
+  migration_required: true
+  migration_notes: "El laboratorio 5.1 incorpora readiness_status NOT_ASSESSED sin cambiar su progreso, evidencia ni pregunta pendiente."
+  evidence_or_decision_reference: "Solicitud, ajuste y aprobación explícita del estudiante el 2026-07-26."
+```
+
+---
+
 ## 7. Versiones publicadas
+
+### PLF 1.4.0 — Environment Readiness Gate
+
+**Estado:** `IMPLEMENTED`
+**Fecha de aprobación:** 2026-07-26
+**Compatibilidad:** Compatible; requiere migración de los campos de workspace
+
+#### Cambios
+
+- Puerta obligatoria antes de iniciar implementación práctica.
+- Estados `NOT_ASSESSED`, `SETUP_REQUIRED`, `CONFIGURING`, `BLOCKED`,
+  `READY_WITH_LIMITATIONS` y `READY`.
+- Comandos agrupados hasta un punto real de dependencia o decisión.
+- Resultados esperados, variantes normales y señales de fallo por bloque.
+- Evidencia de toolchain, dependencias, referencias, editor, linter, build,
+  pruebas y hardware cuando corresponda.
+- Sin respuestas `listo` innecesarias para comandos sin salida.
 
 ### PLF 1.3.0 — Unit Environments and Workspaces
 
@@ -694,6 +754,13 @@ Antes de publicar una versión se debe comprobar:
 ---
 
 ## 12. Historial del documento
+
+### 1.4.0
+
+- Registro de la puerta de preparación del entorno.
+- Sustitución de acciones unitarias por bloques seguros según dependencias.
+- Migración compatible de plantillas y del laboratorio activo.
+- Implementación aprobada de PLF 1.4.0; publicación remota pendiente.
 
 ### 1.3.0
 

@@ -1,9 +1,9 @@
 # [BOOTCAMP NAME]
 
 **Bootcamp ID:** `[ID]`  
-**Version:** 1.0.0  
+**Version:** 1.1.0
 **Status:** `NOT_STARTED`  
-**Framework version:** 1.3.0
+**Framework version:** 1.4.0
 **Target profession:** `[PROFESSION]`  
 **Target level:** `[LEVEL]`
 
@@ -38,7 +38,9 @@ Assets/     Bootcamp-specific diagrams and media
 Practical units place their approved working project under a unit-specific
 `workspace/` directory. Before creating it, the assistant shows the complete
 tree and waits for approval. External tools are operated by the student through
-one guided action at a time.
+dependency-aware blocks. Practical implementation begins only after applicable
+toolchain, dependency, reference, editor and smoke checks reach `READY`, or
+after explicitly accepted limitations.
 
 ## Multi-device continuity
 

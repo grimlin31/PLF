@@ -2,7 +2,7 @@
 
 ## 00 — Master Context
 
-**Versión:** 1.3.0
+**Versión:** 1.4.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Especificación fundacional  
@@ -293,7 +293,11 @@ Todo laboratorio sigue este orden:
 Antes de implementar, la preparación del workspace debe cumplir
 `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`: identificar la superficie de
 trabajo, presentar el árbol completo, esperar aprobación e indicar la ruta
-exacta que debe usar el estudiante.
+exacta que debe usar el estudiante. La implementación práctica empieza solo
+cuando la puerta de preparación confirma herramientas, dependencias,
+referencias, editor o IDE y verificaciones aplicables. Las acciones externas se
+agrupan cuando son independientes y se detienen donde una salida determina el
+siguiente paso.
 
 ### Reglas de los laboratorios
 
@@ -690,6 +694,15 @@ Finaliza cuando:
 ---
 
 ## 23. Historial del documento
+
+### 1.4.0
+
+- Puerta de preparación técnica previa a laboratorios y proyectos.
+- Estados verificables desde `NOT_ASSESSED` hasta `READY`.
+- Diagnóstico y configuración mediante bloques seguros según dependencias.
+- Verificación aplicable de toolchain, dependencias, referencias, IntelliSense,
+  linter, build, pruebas y hardware.
+- Eliminación de confirmaciones vacías para comandos sin salida.
 
 ### 1.3.0
 

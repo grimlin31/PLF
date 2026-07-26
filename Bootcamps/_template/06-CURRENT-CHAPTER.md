@@ -1,6 +1,6 @@
 # Current Chapter Checkpoint
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** `NOT_STARTED`  
 **Bootcamp:** `POR DEFINIR`  
 **Last updated:** `POR DEFINIR`
@@ -41,6 +41,9 @@ workspace:
   absolute_path: null
   open_target: null
   environment_verification_required: false
+  readiness_status: "NOT_ASSESSED | SETUP_REQUIRED | CONFIGURING | BLOCKED | READY_WITH_LIMITATIONS | READY"
+  readiness_blockers: []
+  accepted_limitations: []
 ```
 
 ## Dialogue
