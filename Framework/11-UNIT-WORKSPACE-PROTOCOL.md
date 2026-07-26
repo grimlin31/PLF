@@ -2,8 +2,8 @@
 
 ## 11 — Protocolo de entorno y workspace de unidades
 
-**Versión:** 1.1.0
-**Requiere PLF:** 1.4.0
+**Versión:** 1.2.0
+**Requiere PLF:** 1.5.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -117,7 +117,7 @@ Antes de crear o modificar una estructura de unidad, mostrar:
 4. propósito de cada elemento;
 5. ruta exacta de trabajo;
 6. herramientas externas necesarias;
-7. acciones que deberá ejecutar el estudiante;
+7. plan de setup que ejecutará el asistente y acciones reservadas al estudiante;
 8. elementos excluidos.
 
 El asistente debe esperar aprobación explícita. Una propuesta no autoriza
@@ -126,19 +126,23 @@ escritura.
 Si el estudiante solicita cambios, se presenta un árbol revisado y se espera
 una nueva aprobación.
 
-## 7. Ejecución externa dirigida por el estudiante
+## 7. Preparación operativa dirigida por el asistente
 
-El asistente no ejecutará:
+La aprobación del árbol y del plan de setup autoriza al asistente a preparar el
+entorno dentro del alcance mostrado. Antes de instalar debe consultar
+`07-ENVIRONMENT-REGISTRY.md`, comprobar la instalación existente y reutilizar
+todo componente compatible.
 
-- generadores de proyectos;
-- instaladores;
-- gestores de paquetes;
-- compilaciones;
-- flasheos;
-- comandos de configuración de SDK o frameworks;
-- acciones sobre hardware o aplicaciones externas.
+Puede ejecutar generadores, instaladores, gestores de paquetes, configuración
+de SDK o editor, lint, builds y pruebas de humo. Las instalaciones globales se
+limitan a herramientas compartidas estrictamente necesarias; dependencias y
+versiones reproducibles permanecen locales al proyecto.
 
-Antes de proporcionar acciones externas, el asistente debe separar:
+El estudiante interviene cuando una configuración sea aprendizaje pendiente,
+se requieran credenciales, una autorización del sistema, hardware físico o una
+decisión material.
+
+Cuando una acción deba ser ejecutada por el estudiante, el asistente separa:
 
 - comandos independientes y de solo lectura;
 - acciones modificadoras que comparten un objetivo y pueden verificarse juntas;
@@ -187,8 +191,8 @@ Si algo falla:
 [salida concreta que debe compartirse y punto donde detenerse]
 ```
 
-Las instalaciones, descargas o cambios globales requieren autorización
-específica aunque sean un prerrequisito.
+Una acción fuera del plan aprobado, un cambio global adicional o una selección
+ambigua requiere nueva autorización.
 
 ## 8. Puerta de preparación del entorno
 
@@ -226,23 +230,27 @@ comprobaciones aplicables:
 11. target, placa, puerto, drivers o permisos cuando corresponda;
 12. reproducibilidad y reapertura del editor cuando sea necesaria.
 
-No se marca una comprobación como superada sin salida compartida, confirmación
-verificable o evidencia existente todavía válida. `WORKSPACE.md` registra las
+No se marca una comprobación como superada sin salida verificable o evidencia
+existente todavía válida. `WORKSPACE.md` registra las
 versiones, bloques ejecutados, verificaciones, bloqueos y limitaciones.
 
 Un fallo de configuración se resuelve antes de escribir la implementación
 práctica. Se diagnostica por bloques y se detiene únicamente donde una salida
 sea necesaria para elegir la corrección.
 
-La preparación es operativa y no eleva competencias, salvo que configurar la
-herramienta sea un objetivo explícito de aprendizaje.
+La preparación es operativa y no eleva competencias. Si configurar la
+herramienta es relevante para la profesión y todavía no fue enseñado, se aplica
+el modo guiado de `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
+
+Después de superar esta puerta, toda implementación práctica se rige por el
+protocolo 12 y comienza en modo `STUDENT_AUTHORED`.
 
 ## 9. Preparación de una unidad
 
 1. Resolver el Bootcamp y `current_focus`.
 2. Leer los requisitos de la unidad.
 3. Revisar artefactos existentes sin sobrescribirlos.
-4. Determinar si el entorno registrado es suficiente.
+4. Consultar el registro compartido y determinar si el entorno es suficiente.
 5. Preguntar únicamente por datos imprescindibles que falten.
 6. Seleccionar las superficies de trabajo.
 7. Diseñar el árbol y la configuración mínima.
@@ -251,9 +259,11 @@ herramienta sea un objetivo explícito de aprendizaje.
 10. Verificar estructura, rutas y alcance.
 11. Informar dónde debe trabajar el estudiante.
 12. Definir las comprobaciones de preparación aplicables.
-13. Guiar las acciones externas en bloques seguros según sus dependencias.
-14. Registrar evidencia y resolver bloqueos.
-15. Declarar `READY` o solicitar aceptación de limitaciones antes de implementar.
+13. Ejecutar automáticamente el setup aprobado que no sea objetivo pedagógico.
+14. Guiar únicamente la parte pedagógica o la intervención que requiera al
+    estudiante.
+15. Registrar evidencia y resolver bloqueos.
+16. Declarar `READY` o solicitar aceptación de limitaciones antes de implementar.
 
 ## 10. Consultas y tracking
 
@@ -289,8 +299,9 @@ atribuye progreso pedagógico.
 - No asumir que el sistema operativo coincide con un dispositivo anterior.
 - No convertir información observada en hardware físico no verificado.
 - No crear estructuras sin aprobación.
-- No ejecutar acciones externas en nombre del estudiante.
-- No instalar dependencias implícitamente.
+- No instalar antes de comprobar el registro y la instalación existente.
+- No instalar globalmente una dependencia que deba quedar fijada al proyecto.
+- No exceder el plan de setup aprobado.
 - No iniciar implementación práctica sin superar la puerta de preparación.
 - No declarar `READY` sin evidencia.
 - No agrupar acciones cuando una salida intermedia determine el siguiente paso.

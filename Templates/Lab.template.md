@@ -3,7 +3,7 @@
 ## Chapter [X.Y] — Laboratory: [TITLE]
 
 **ID:** `CH-XX.Y-LAB`  
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** `PLANNED`  
 **Parent chapter:** `CH-XX`  
 **Type:** Practical laboratory  
@@ -51,11 +51,11 @@
 - Environment verification required: `[YES | NO, with reason]`
 - Environment readiness: `[NOT_ASSESSED | SETUP_REQUIRED | CONFIGURING | BLOCKED | READY_WITH_LIMITATIONS | READY]`
 
-Before creating files, show the complete proposed tree, affected paths and
-student-executed external actions. Wait for explicit approval.
-After creation, group safe setup commands, verify the applicable toolchain,
-dependencies, references, editor diagnostics and smoke checks, and do not begin
-implementation before the readiness gate passes.
+Before creating files, show the complete proposed tree, affected paths, setup
+plan, installation scopes, student-required actions and exclusions. Wait for
+explicit approval. The assistant then verifies existing tools and executes the
+approved operational setup. Configuration is student-guided only when it is a
+pending learning objective or requires user intervention.
 
 ## 5. Constraints
 
@@ -89,8 +89,11 @@ implementation before the readiness gate passes.
 
 ## 9. Procedure
 
-1. [Step]
-2. [Step]
+1. Elicit the student's hypothesis.
+2. Introduce and interpret the required API.
+3. Build a plan or pseudocode collaboratively.
+4. Have the student implement a small increment.
+5. Run, observe, debug and explain before the next increment.
 
 ## 10. Implementation
 
@@ -101,7 +104,18 @@ implementation before the readiness gate passes.
 ### Important excerpts
 
 ```text
-[CODE OR CONFIGURATION]
+[STUDENT-AUTHORED CODE OR CLEARLY ATTRIBUTED REFERENCE]
+```
+
+### Assistance tracking
+
+```yaml
+implementation_learning:
+  mode: "STUDENT_AUTHORED"
+  assistance_level: "QUESTION"
+  student_decisions: []
+  student_explanations: []
+  assistant_generated_solution_code: []
 ```
 
 ## 11. Verification plan
@@ -170,6 +184,10 @@ implementation before the readiness gate passes.
 [Next laboratory, chapter, project or review.]
 
 ## 20. Document history
+
+### 1.2.0
+
+- Added assistant-executed approved setup and student-authored implementation.
 
 ### 1.1.0
 

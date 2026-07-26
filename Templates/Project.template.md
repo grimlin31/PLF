@@ -3,7 +3,7 @@
 ## Project [X] — [TITLE]
 
 **ID:** `PRJ-XX`  
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** `PLANNED`  
 **Type:** Integrating project  
 **Estimated effort:** [MIN–MAX HOURS]
@@ -64,11 +64,11 @@
 - Environment verification required: `[YES | NO, with reason]`
 - Environment readiness: `[NOT_ASSESSED | SETUP_REQUIRED | CONFIGURING | BLOCKED | READY_WITH_LIMITATIONS | READY]`
 
-Before creating files, show the complete proposed tree, affected paths and
-student-executed external actions. Wait for explicit approval.
-After creation, group safe setup commands, verify the applicable toolchain,
-dependencies, references, editor diagnostics and smoke checks, and do not begin
-implementation before the readiness gate passes.
+Before creating files, show the complete proposed tree, affected paths, setup
+plan, installation scopes, student-required actions and exclusions. Wait for
+explicit approval. The assistant then verifies existing tools and executes the
+approved operational setup. Configuration is student-guided only when it is a
+pending learning objective or requires user intervention.
 
 ## 7. Competencies integrated
 
@@ -108,7 +108,21 @@ implementation before the readiness gate passes.
 
 ## 11. Implementation plan
 
-1. [Step]
+1. Elicit the student's design and expected behavior.
+2. Review APIs and architectural choices interactively.
+3. Have the student implement incremental milestones.
+4. Validate each increment and give progressive hints rather than a solution.
+
+### Assistance tracking
+
+```yaml
+implementation_learning:
+  mode: "STUDENT_AUTHORED"
+  assistance_level: "QUESTION"
+  student_decisions: []
+  student_explanations: []
+  assistant_generated_solution_code: []
+```
 
 ## 12. Test and validation strategy
 
@@ -202,6 +216,10 @@ implementation before the readiness gate passes.
 - [ ] Competency evidence is accepted.
 
 ## 21. Document history
+
+### 1.2.0
+
+- Added assistant-executed approved setup and student-authored implementation.
 
 ### 1.1.0
 

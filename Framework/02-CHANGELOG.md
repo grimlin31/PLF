@@ -2,7 +2,7 @@
 
 ## 02 — Changelog
 
-**Versión:** 1.4.0
+**Versión:** 1.5.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Registro oficial de cambios  
@@ -557,7 +557,77 @@ change:
 
 ---
 
+### CHG-0015 — Setup automático y práctica con autoría del estudiante
+
+```yaml
+change:
+  id: "CHG-0015"
+  title: "Setup automático y práctica con autoría del estudiante"
+  status: "IMPLEMENTED"
+  type: "MINOR"
+  proposed_at: "2026-07-26"
+  approved_at: "2026-07-26"
+  implemented_at: "2026-07-26"
+  effective_from: "PLF 1.5.0"
+  requested_by: "Estudiante"
+  reason: "Evitar repetir configuraciones entre unidades y asegurar que laboratorios y proyectos desarrollen comprensión y autoría en lugar de copiar soluciones."
+  description: "Tras aprobar el setup, el asistente verifica, instala lo estrictamente necesario y deja el entorno READY; reutiliza herramientas compartidas, guía configuraciones pedagógicas pendientes y mantiene la implementación evaluada como STUDENT_AUTHORED."
+  affected_documents:
+    - "AGENTS.md"
+    - "README.md"
+    - "Framework/00-MASTER-CONTEXT.md"
+    - "Framework/02-CHANGELOG.md"
+    - "Framework/07-COMMAND-PROTOCOL.md"
+    - "Framework/08-FILE-SAFETY-POLICY.md"
+    - "Framework/09-BOOTCAMP-BOOTSTRAP.md"
+    - "Framework/11-UNIT-WORKSPACE-PROTOCOL.md"
+    - "Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md"
+    - "Templates/Lab.template.md"
+    - "Templates/Project.template.md"
+    - "Templates/Workspace.template.md"
+    - "Templates/Environment-Registry.template.md"
+    - "Bootcamps/_template/README.md"
+    - "Bootcamps/_template/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/_template/06-CURRENT-CHAPTER.md"
+    - "Bootcamps/_template/07-ENVIRONMENT-REGISTRY.md"
+    - "Bootcamps/Embedded Systems Bootcamp/README.md"
+    - "Bootcamps/Embedded Systems Bootcamp/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/Embedded Systems Bootcamp/05-BOOTCAMP-STATE.md"
+    - "Bootcamps/Embedded Systems Bootcamp/06-CURRENT-CHAPTER.md"
+    - "Bootcamps/Embedded Systems Bootcamp/07-ENVIRONMENT-REGISTRY.md"
+  affected_bootcamps:
+    - "Embedded Systems Bootcamp"
+  backward_compatible: true
+  migration_required: true
+  migration_notes: "El laboratorio 5.1 conserva progreso, evidencia y pregunta pendiente; ESP-IDF en macOS queda UNKNOWN y su configuración NOT_TAUGHT hasta obtener evidencia."
+  evidence_or_decision_reference: "Solicitud, propuesta y aprobación explícita del estudiante el 2026-07-26."
+```
+
+---
+
 ## 7. Versiones publicadas
+
+### PLF 1.5.0 — Automated Setup and Student-Authored Practice
+
+**Estado:** `IMPLEMENTED`
+**Fecha de aprobación:** 2026-07-26
+**Compatibilidad:** Compatible; requiere crear el registro de entorno
+
+#### Cambios
+
+- Setup operativo ejecutado por el asistente después de aprobación.
+- Verificación antes de instalar y reutilización de herramientas compartidas.
+- Instalaciones globales solo para herramientas reutilizables indispensables.
+- Dependencias reproducibles locales al proyecto.
+- Tracking de aprendizaje de configuración.
+- Implementación `STUDENT_AUTHORED`.
+- Enseñanza interactiva de APIs y ayuda progresiva.
+- Clasificación pedagógica de bugs de configuración.
+
+#### Documentos implementados
+
+- `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`
+- `Templates/Environment-Registry.template.md`
 
 ### PLF 1.4.0 — Environment Readiness Gate
 
@@ -755,12 +825,19 @@ Antes de publicar una versión se debe comprobar:
 
 ## 12. Historial del documento
 
+### 1.5.0
+
+- Registro de setup automático aprobado y entorno reutilizable.
+- Registro de autoría del estudiante y ayuda progresiva.
+- Migración conservadora del laboratorio activo.
+- Implementación aprobada de PLF 1.5.0; publicación remota pendiente.
+
 ### 1.4.0
 
 - Registro de la puerta de preparación del entorno.
 - Sustitución de acciones unitarias por bloques seguros según dependencias.
 - Migración compatible de plantillas y del laboratorio activo.
-- Implementación aprobada de PLF 1.4.0; publicación remota pendiente.
+- Publicación de PLF 1.4.0.
 
 ### 1.3.0
 

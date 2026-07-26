@@ -34,13 +34,22 @@ environment:
 
 ## External prerequisites
 
-- [Tool or framework installed by the student]
+- [Shared or project-local tool, scope and version requirement]
 
-## Student-executed setup
+## Approved setup execution
 
-Group independent actions into the largest safe block. Record purpose,
-location, dependencies, expected and unacceptable results, evidence and the
-condition that requires a response.
+```yaml
+setup_execution:
+  executor: "ASSISTANT | GUIDED_STUDENT | STUDENT_REQUIRED"
+  approved_global_changes: []
+  approved_project_local_changes: []
+  excluded_actions: []
+  environment_registry: "[BOOTCAMP PATH]/07-ENVIRONMENT-REGISTRY.md"
+```
+
+The assistant verifies before installing and executes approved operational
+setup. Use guided student execution only when configuration is a pending
+learning objective or requires credentials, system confirmation or hardware.
 
 ## Environment readiness
 
@@ -62,6 +71,18 @@ readiness:
 |---|---|---|---|---|
 | `SETUP-01` | [Objective] | [NONE or block] | `PENDING` | [Evidence] |
 
+## Implementation learning
+
+```yaml
+implementation_learning:
+  mode: "STUDENT_AUTHORED"
+  assistance_level: "QUESTION | HINT | API_GUIDANCE | PSEUDOCODE | INCOMPLETE_FRAGMENT | LOCAL_CORRECTION | REFERENCE_SOLUTION"
+  student_decisions: []
+  student_explanations: []
+  student_authored_artifacts: []
+  assistant_generated_solution_code: []
+```
+
 ## Generated or local-only content
 
 - `[PATH]` — `[TRACKED | IGNORED | LOCAL_ONLY]`
@@ -70,9 +91,13 @@ readiness:
 
 - [ ] Approved tree was created without overwriting user work.
 - [ ] Working path was reported.
-- [ ] External actions remain student-executed.
+- [ ] Existing compatible shared tools were reused.
+- [ ] Global installations are strictly necessary and reusable.
+- [ ] Reproducible dependencies remain project-local.
 - [ ] Operating-system instructions match the active environment.
 - [ ] Toolchain, dependencies and project references are resolved.
 - [ ] Editor or IDE diagnostics applicable to the unit are working.
 - [ ] Linter, build, tests or smoke check applicable to the unit passed.
 - [ ] No implementation began before the readiness gate.
+- [ ] Evaluated solution code remains student-authored.
+- [ ] Assistance level and actual authorship were recorded.

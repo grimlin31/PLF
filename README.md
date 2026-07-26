@@ -1,6 +1,6 @@
 # Professional Learning Framework (PLF)
 
-**Versión:** 1.4.0
+**Versión:** 1.5.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Documento Fundacional
@@ -296,7 +296,8 @@ Las instrucciones de ejecución se encuentran en:
 - `Framework/08-FILE-SAFETY-POLICY.md`;
 - `Framework/09-BOOTCAMP-BOOTSTRAP.md`;
 - `Framework/10-MULTI-DEVICE-SYNC.md`;
-- `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
+- `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`;
+- `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
 
 Durante una unidad normal solo puede escribirse en el Bootcamp cuyo nombre
 coincide con el Project.
@@ -309,15 +310,22 @@ o aparece una contradicción. Las instrucciones operativas se limitan al sistema
 activo.
 
 Antes de crear archivos para una unidad, el asistente presenta el árbol
-completo, las rutas y las acciones externas necesarias. La creación requiere
-aprobación explícita. Generadores, instaladores, compilaciones, flasheos y
-herramientas externas son ejecutados por el estudiante mediante bloques
-seguros agrupados por dependencias.
+completo, las rutas y el plan de setup. La creación requiere aprobación
+explícita. Después, el asistente comprueba instalaciones existentes, reutiliza
+herramientas compartidas y ejecuta la preparación operativa aprobada.
 
 Un laboratorio o proyecto no inicia su implementación práctica hasta verificar
 las herramientas, dependencias, referencias, editor o IDE y comprobaciones
 aplicables. El estado requerido es `READY`, o `READY_WITH_LIMITATIONS` después
 de una aceptación explícita.
+
+Las herramientas compartidas se registran una vez por Bootcamp y no se
+reinstalan mientras continúen compatibles. Las dependencias reproducibles
+permanecen locales a cada proyecto.
+
+La implementación práctica usa `STUDENT_AUTHORED`: el estudiante diseña,
+escribe y explica el código; el asistente enseña APIs y ofrece preguntas,
+pseudocódigo y pistas progresivas sin sustituir la solución.
 
 ### Sincronización entre computadores
 

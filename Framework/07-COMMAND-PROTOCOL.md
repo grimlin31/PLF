@@ -2,8 +2,8 @@
 
 ## 07 — Protocolo de comandos
 
-**Versión:** 1.3.0
-**Requiere PLF:** 1.4.0
+**Versión:** 1.4.0
+**Requiere PLF:** 1.5.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -29,27 +29,25 @@ Comportamiento:
 1. Resolver el Bootcamp y confirmar que la unidad coincide con
    `current_focus`.
 2. Leer `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
-3. Cargar el entorno registrado sin inspeccionarlo de nuevo salvo necesidad.
-4. Determinar si el trabajo corresponde a chat, editor, IDE, terminal, hardware
+3. Leer `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
+4. Cargar el registro compartido y el entorno sin reinspección innecesaria.
+5. Determinar si el trabajo corresponde a chat, editor, IDE, terminal, hardware
    o una combinación.
-5. Analizar artefactos existentes y preservar cambios del usuario.
-6. Mostrar el árbol completo, archivos afectados, ruta de trabajo,
-   prerrequisitos y acciones externas.
-7. Esperar aprobación explícita.
-8. Crear únicamente archivos internos aprobados.
-9. Verificar la estructura e informar dónde debe trabajar el estudiante.
-10. Seleccionar las comprobaciones de preparación aplicables.
-11. Agrupar acciones externas independientes y detenerse solo en dependencias,
-    decisiones, errores o verificaciones necesarias.
-12. Registrar evidencia y no comenzar la implementación hasta alcanzar
+6. Analizar artefactos existentes y preservar cambios del usuario.
+7. Mostrar árbol, archivos, ruta, plan de setup, alcance de instalaciones,
+   acciones reservadas al estudiante y exclusiones.
+8. Esperar aprobación explícita.
+9. Crear únicamente archivos aprobados.
+10. Verificar herramientas existentes antes de instalar.
+11. Preparar automáticamente lo operativo dentro del alcance aprobado.
+12. Guiar la configuración solo si es aprendizaje pendiente o requiere al
+    estudiante.
+13. Registrar evidencia y no comenzar la implementación hasta alcanzar
     `READY` o aceptar explícitamente `READY_WITH_LIMITATIONS`.
+14. Iniciar la implementación en modo `STUDENT_AUTHORED`.
 
-No ejecuta generadores, instalaciones, gestores de paquetes, compilaciones,
-flasheos ni operaciones sobre IDE, SDK, frameworks o hardware.
-
-Cada bloque indica objetivo, ruta, comandos, resultado esperado, variantes
-normales, resultados incorrectos y qué debe compartirse si falla. Un comando
-sin salida no exige responder `listo`.
+No excede el setup aprobado. Las credenciales, autorizaciones del sistema,
+hardware físico y decisiones ambiguas permanecen con el estudiante.
 
 ### `/consulta <tema>`
 

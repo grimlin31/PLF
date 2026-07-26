@@ -2,7 +2,7 @@
 
 ## 00 — Master Context
 
-**Versión:** 1.4.0
+**Versión:** 1.5.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Especificación fundacional  
@@ -296,13 +296,24 @@ trabajo, presentar el árbol completo, esperar aprobación e indicar la ruta
 exacta que debe usar el estudiante. La implementación práctica empieza solo
 cuando la puerta de preparación confirma herramientas, dependencias,
 referencias, editor o IDE y verificaciones aplicables. Las acciones externas se
-agrupan cuando son independientes y se detienen donde una salida determina el
-siguiente paso.
+ejecutan por el asistente dentro del setup aprobado, salvo que sean aprendizaje
+pendiente o requieran intervención directa. Las herramientas compartidas se
+registran y reutilizan; las dependencias reproducibles permanecen locales.
+
+La práctica sigue
+`Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`: el código que demuestra
+competencias debe ser diseñado, escrito y explicado por el estudiante mediante
+un ciclo interactivo y pistas progresivas.
 
 ### Reglas de los laboratorios
 
 - La práctica es el foco principal.
 - La teoría solo se refuerza cuando una laguna aparece durante la implementación.
+- La configuración operativa se automatiza después de aprobación.
+- La configuración relevante no enseñada se realiza como actividad guiada.
+- La solución evaluada permanece `STUDENT_AUTHORED`.
+- El asistente enseña APIs y ayuda a inferir el código antes de mostrar
+  fragmentos o soluciones.
 - Las preguntas deben orientarse al comportamiento observable, el diseño, la depuración y las decisiones tomadas.
 - Un laboratorio no se aprueba únicamente porque el resultado final funcione.
 - El estudiante debe poder explicar por qué funciona y cuáles son sus límites.
@@ -632,6 +643,7 @@ Framework/08-FILE-SAFETY-POLICY.md
 Framework/09-BOOTCAMP-BOOTSTRAP.md
 Framework/10-MULTI-DEVICE-SYNC.md
 Framework/11-UNIT-WORKSPACE-PROTOCOL.md
+Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md
 Templates/
 Bootcamps/
 Assets/
@@ -694,6 +706,15 @@ Finaliza cuando:
 ---
 
 ## 23. Historial del documento
+
+### 1.5.0
+
+- Preparación automática del entorno después de aprobación.
+- Registro reutilizable de herramientas y configuración por Bootcamp.
+- Instalaciones globales limitadas a herramientas compartidas indispensables.
+- Dependencias reproducibles conservadas localmente.
+- Tracking de configuración `NOT_TAUGHT` a `MASTERED`.
+- Implementación `STUDENT_AUTHORED` con ayuda progresiva y aprendizaje de APIs.
 
 ### 1.4.0
 
@@ -768,7 +789,8 @@ El comportamiento operativo se define en:
 - `Framework/07-COMMAND-PROTOCOL.md`;
 - `Framework/09-BOOTCAMP-BOOTSTRAP.md`;
 - `Framework/10-MULTI-DEVICE-SYNC.md`;
-- `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
+- `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`;
+- `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
 
 Los comandos mínimos son:
 

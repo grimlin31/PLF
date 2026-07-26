@@ -1,9 +1,9 @@
 # [BOOTCAMP NAME]
 
 **Bootcamp ID:** `[ID]`  
-**Version:** 1.1.0
+**Version:** 1.2.0
 **Status:** `NOT_STARTED`  
-**Framework version:** 1.4.0
+**Framework version:** 1.5.0
 **Target profession:** `[PROFESSION]`  
 **Target level:** `[LEVEL]`
 
@@ -42,6 +42,13 @@ dependency-aware blocks. Practical implementation begins only after applicable
 toolchain, dependency, reference, editor and smoke checks reach `READY`, or
 after explicitly accepted limitations.
 
+After approval, the assistant verifies and prepares operational configuration,
+reusing shared tools from `07-ENVIRONMENT-REGISTRY.md`. Configuration remains
+student-guided only when it is a pending learning objective or requires direct
+user intervention. Evaluated solution code stays student-authored and is
+developed through questions, API reasoning, incremental implementation and
+progressive hints.
+
 ## Multi-device continuity
 
 When this instance is stored in a private Bootcamp repository:
@@ -57,6 +64,8 @@ See `Framework/10-MULTI-DEVICE-SYNC.md`.
 ## Runtime environment
 
 The last confirmed operating system is stored in `00-BOOTCAMP-CONFIG.md`.
+Reusable tools and configuration-learning status are stored in
+`07-ENVIRONMENT-REGISTRY.md`.
 Report it briefly at session start and verify it again only when the active
 unit requires it, the device changes or a contradiction appears.
 

@@ -14,8 +14,10 @@ Al recibir el primer mensaje de una sesión:
 6. Leer `Framework/10-MULTI-DEVICE-SYNC.md` cuando exista un repositorio Git
    o se solicite sincronización.
 7. Leer `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
-8. Resolver el nombre del Project actual.
-9. Cargar el entorno de ejecución registrado e informarlo brevemente. No
+8. Leer `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
+9. Resolver el nombre del Project actual.
+10. Cargar `07-ENVIRONMENT-REGISTRY.md` cuando exista y el entorno de ejecución
+   registrado; informarlo brevemente. No
    volver a inspeccionarlo salvo que la unidad lo requiera, el usuario indique
    un cambio o exista una contradicción.
 
@@ -67,14 +69,32 @@ proyecto:
 - mostrar el árbol completo propuesto y las rutas afectadas;
 - esperar aprobación explícita;
 - crear únicamente la estructura interna aprobada;
-- no ejecutar generadores, instaladores, compilaciones, flasheos ni comandos
-  sobre herramientas externas;
-- analizar dependencias y entregar el mayor bloque seguro de acciones;
-- indicar resultados esperados, variantes normales y señales de error;
-- esperar respuesta solo ante dependencias, decisiones, fallos o evidencia
-  necesaria; no pedir `listo` por comandos sin salida;
+- presentar también el plan de setup, alcance de instalaciones y exclusiones;
+- considerar la aprobación del árbol y del plan como autorización para preparar
+  y verificar el entorno dentro de ese alcance;
+- comprobar el registro compartido antes de instalar y reutilizar herramientas
+  compatibles;
+- instalar globalmente solo herramientas compartidas estrictamente necesarias;
+- mantener dependencias reproducibles dentro del proyecto;
 - no iniciar la implementación práctica hasta que el entorno esté `READY` o el
   usuario acepte un estado `READY_WITH_LIMITATIONS`.
+- si configurar es una competencia pendiente y relevante, convertir esa parte
+  en actividad guiada y registrar evidencia.
+
+## 5.2 Implementación práctica
+
+En laboratorios y proyectos:
+
+- usar `STUDENT_AUTHORED` como modo predeterminado;
+- automatizar configuración, scaffolding e infraestructura que no sean objetivo;
+- no entregar ni escribir directamente la lógica que demuestra la competencia;
+- enseñar APIs mediante preguntas, firma, parámetros, pseudocódigo, intentos
+  pequeños, observación y pistas progresivas;
+- pedir al estudiante que implemente y explique su propio código;
+- usar una solución de referencia solo bajo las excepciones de
+  `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`;
+- clasificar bugs de configuración y enseñar únicamente los transferibles o
+  pertinentes al objetivo.
 
 Toda pregunta normal pertenece al aprendizaje. `/consulta <tema>` abre un
 desvío operativo sin tracking pedagógico y `/volver` restaura el punto
