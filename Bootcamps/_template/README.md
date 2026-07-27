@@ -3,7 +3,7 @@
 **Bootcamp ID:** `[ID]`  
 **Version:** 1.2.0
 **Status:** `NOT_STARTED`  
-**Framework version:** 1.5.0
+**Framework version:** 2.0.0
 **Target profession:** `[PROFESSION]`  
 **Target level:** `[LEVEL]`
 

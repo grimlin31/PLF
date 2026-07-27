@@ -2,7 +2,7 @@
 
 ## 01 — Knowledge Index
 
-**Versión:** 1.0.0  
+**Versión:** 2.0.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Índice maestro de conocimiento  
@@ -64,6 +64,7 @@ Cada capítulo, laboratorio o proyecto debe utilizar uno de estos estados:
 |---|---|
 | `PLANNED` | Definido en el roadmap, pero no iniciado. |
 | `READY` | Sus prerrequisitos están satisfechos y puede comenzar. |
+| `READY_TO_RESTART` | Un intento no acreditable terminó y la unidad debe comenzar nuevamente. |
 | `IN_PROGRESS` | Se encuentra activo. |
 | `AWAITING_VALIDATION` | El contenido terminó y falta validar aprendizaje o evidencia. |
 | `COMPLETED` | Cumplió sus criterios de finalización. |
@@ -71,6 +72,7 @@ Cada capítulo, laboratorio o proyecto debe utilizar uno de estos estados:
 | `BLOCKED` | No puede continuar por una dependencia o impedimento explícito. |
 | `DEFERRED` | Fue aplazado deliberadamente. |
 | `CANCELLED` | Se retiró del alcance vigente. |
+| `INVALID_METHOD` | El intento se conserva para auditoría, pero no acredita enseñanza ni cierre. |
 
 ### 3.2 Estados de una competencia
 
@@ -96,6 +98,7 @@ Cada competencia debe utilizar uno de estos niveles:
 | `PARTIAL` | Aporta evidencia, pero requiere trabajo adicional. |
 | `REJECTED` | No demuestra la competencia o contiene errores materiales. |
 | `SUPERSEDED` | Fue reemplazada por evidencia posterior de mayor calidad. |
+| `DIAGNOSTIC_ONLY` | Informa el punto inicial, pero no acredita contenido enseñado ni competencia. |
 
 ---
 
@@ -192,6 +195,8 @@ Esta tabla contiene el catálogo oficial de capítulos, laboratorios y proyectos
 - Cada unidad debe tener un propósito único.
 - Un laboratorio relacionado con un capítulo debe usar la numeración `X.1`, `X.2`, etc.
 - Una unidad solo puede marcarse `COMPLETED` cuando se cumplan sus criterios de cierre.
+- Un capítulo teórico debe superar también la auditoría metodológica del
+  protocolo 13.
 - Terminar una conversación o leer las notas no constituye evidencia suficiente.
 - Los prerrequisitos deben referenciar unidades o competencias concretas.
 

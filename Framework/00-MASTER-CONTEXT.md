@@ -2,7 +2,7 @@
 
 ## 00 — Master Context
 
-**Versión:** 1.5.0
+**Versión:** 2.0.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Especificación fundacional  
@@ -251,6 +251,28 @@ Todo capítulo teórico sigue este orden:
 13. Notas técnicas.
 14. Actualización de los documentos de seguimiento.
 
+La ejecución detallada y sus transiciones obligatorias se definen en
+`Framework/13-THEORY-EXECUTION-PROTOCOL.md`.
+
+### Reglas de fase
+
+- «Una pregunta a la vez» limita preguntas pendientes; no sustituye la
+  explicación.
+- Después del repaso activo deben presentarse panorama general, problema de
+  ingeniería y explicación antes de otra pregunta.
+- Una corrección no sustituye retroactivamente contenido no enseñado.
+- Contenido producido antes de su enseñanza se conserva como diagnóstico, no
+  como validación.
+- El cierre requiere auditar contenido y metodología por separado.
+
+### Escritura documental
+
+Las notas y documentos de seguimiento se consolidan al final del capítulo. La
+conversación conserva el estado pedagógico durante la unidad.
+
+Se exceptúan código, workspace, configuración, evidencia práctica, correcciones
+de seguridad y checkpoints solicitados expresamente para continuidad.
+
 ### Regla de interacción
 
 Cuando el mentor formula una pregunta que requiere respuesta:
@@ -491,6 +513,12 @@ La sesión debe recibir:
 - el identificador del capítulo o laboratorio;
 - los documentos específicos que sean necesarios.
 
+Un cierre formal satisfactorio incluye el handoff a la unidad siguiente. La
+orden `/cerrar-capitulo` autoriza crear un chat en español dentro del mismo
+Project después de consolidar los documentos. El nuevo chat recibe un prompt
+que identifica Bootcamp, siguiente unidad, fase inicial, contexto requerido y
+entorno reutilizable.
+
 ### Cierre de una sesión
 
 El mentor debe:
@@ -631,6 +659,7 @@ Una implementación completa del PLF debe disponer, como mínimo, de:
 
 ```text
 README.md
+MANUAL-DE-USO.md
 Framework/00-MASTER-CONTEXT.md
 Framework/01-KNOWLEDGE-INDEX.md
 Framework/02-CHANGELOG.md
@@ -644,6 +673,7 @@ Framework/09-BOOTCAMP-BOOTSTRAP.md
 Framework/10-MULTI-DEVICE-SYNC.md
 Framework/11-UNIT-WORKSPACE-PROTOCOL.md
 Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md
+Framework/13-THEORY-EXECUTION-PROTOCOL.md
 Templates/
 Bootcamps/
 Assets/
@@ -656,9 +686,12 @@ Cada documento debe tener una única responsabilidad.
 
 ## 20. Fuente de verdad y portabilidad
 
-El repositorio local es la fuente persistente de verdad.
+El repositorio local es la fuente persistente de verdad después de un cierre o
+checkpoint.
 
-Los chats y herramientas de IA son entornos de trabajo temporales.
+Durante una unidad, la conversación contiene un ledger temporal. Los chats y
+herramientas de IA no sustituyen la persistencia; antes de abandonar una unidad
+sin cerrarla debe solicitarse un checkpoint.
 
 ### Reglas
 
@@ -706,6 +739,13 @@ Finaliza cuando:
 ---
 
 ## 23. Historial del documento
+
+### 2.0.0
+
+- Incorporación del protocolo determinista de teoría.
+- Separación entre diagnóstico, enseñanza y validación.
+- Escritura documental diferida hasta el cierre.
+- Auditoría metodológica y handoff automático a un chat nuevo.
 
 ### 1.5.0
 
@@ -790,7 +830,8 @@ El comportamiento operativo se define en:
 - `Framework/09-BOOTCAMP-BOOTSTRAP.md`;
 - `Framework/10-MULTI-DEVICE-SYNC.md`;
 - `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`;
-- `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
+- `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`;
+- `Framework/13-THEORY-EXECUTION-PROTOCOL.md`.
 
 Los comandos mínimos son:
 

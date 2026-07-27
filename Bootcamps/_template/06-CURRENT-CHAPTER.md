@@ -1,6 +1,6 @@
 # Current Chapter Checkpoint
 
-**Version:** 1.3.0
+**Version:** 2.0.0
 **Status:** `NOT_STARTED`  
 **Bootcamp:** `POR DEFINIR`  
 **Last updated:** `POR DEFINIR`
@@ -12,13 +12,34 @@ checkpoint:
   unit_id: "POR DEFINIR"
   unit_type: "CHAPTER | LAB | PROJECT | INTERVIEW"
   title: "POR DEFINIR"
-  partial_status: "NOT_STARTED | IN_PROGRESS | BLOCKED | PAUSED | READY_TO_CLOSE"
+  partial_status: "NOT_STARTED | READY_TO_RESTART | IN_PROGRESS | BLOCKED | PAUSED | INVALID_METHOD | READY_TO_CLOSE"
   last_completed_point: "POR DEFINIR"
   current_point: "POR DEFINIR"
   pending_question: null
   next_action: "POR DEFINIR"
   completion_criteria_remaining: []
 ```
+
+## Methodology
+
+```yaml
+methodology:
+  protocol: "THEORY | PRACTICAL"
+  documentation_mode: "DEFERRED_UNTIL_CLOSURE"
+  current_phase: "ACTIVE_RECALL"
+  current_concept: null
+  pending_question: null
+
+turn_contract:
+  action: "ASK"
+  phase: "ACTIVE_RECALL"
+  question_allowed: true
+  student_response_expected: true
+  next_phase: "PANORAMA"
+```
+
+This file is normally consolidated at closure. `/sincronizar-capitulo`
+explicitly authorizes a minimal continuity checkpoint.
 
 ## Active artifacts
 

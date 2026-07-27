@@ -1,9 +1,11 @@
 # Professional Learning Framework (PLF)
 
-**Versión:** 1.5.0
+**Versión:** 2.0.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Documento Fundacional
+
+**Primer uso:** consulte [`MANUAL-DE-USO.md`](MANUAL-DE-USO.md).
 
 ---
 
@@ -257,6 +259,8 @@ Professional-Learning-Framework/
 
 README.md
 
+MANUAL-DE-USO.md
+
 Framework/
 
 Bootcamps/
@@ -297,7 +301,8 @@ Las instrucciones de ejecución se encuentran en:
 - `Framework/09-BOOTCAMP-BOOTSTRAP.md`;
 - `Framework/10-MULTI-DEVICE-SYNC.md`;
 - `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`;
-- `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
+- `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`;
+- `Framework/13-THEORY-EXECUTION-PROTOCOL.md`.
 
 Durante una unidad normal solo puede escribirse en el Bootcamp cuyo nombre
 coincide con el Project.

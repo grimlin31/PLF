@@ -2,8 +2,8 @@
 
 ## 11 — Protocolo de entorno y workspace de unidades
 
-**Versión:** 1.2.0
-**Requiere PLF:** 1.5.0
+**Versión:** 2.0.0
+**Requiere PLF:** 2.0.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -267,8 +267,9 @@ protocolo 12 y comienza en modo `STUDENT_AUTHORED`.
 
 ## 10. Consultas y tracking
 
-Toda pregunta normal se considera parte del aprendizaje y se registra cuando
-produce conceptos, correcciones, decisiones técnicas o evidencia relevantes.
+Toda pregunta normal se considera parte del aprendizaje. Los conceptos,
+correcciones, decisiones y evidencias relevantes se mantienen en el ledger de
+la conversación y se consolidan documentalmente durante el cierre.
 
 `/consulta <tema>` abre un desvío operativo sin tracking pedagógico para:
 

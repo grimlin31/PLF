@@ -2,8 +2,8 @@
 
 ## 09 — Bootstrap conversacional de Bootcamps
 
-**Versión:** 1.3.0
-**Requiere PLF:** 1.5.0
+**Versión:** 2.0.0
+**Requiere PLF:** 2.0.0
 **Estado:** Aprobado
 
 ## 1. Objetivo
@@ -135,7 +135,8 @@ Tras aprobación:
 La creación del Bootcamp no ejecuta generadores, instalaciones ni
 configuraciones de herramientas externas. Cada unidad práctica aplica
 `Framework/11-UNIT-WORKSPACE-PROTOCOL.md` y
-`Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
+`Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`. Los capítulos teóricos
+aplican `Framework/13-THEORY-EXECUTION-PROTOCOL.md`.
 
 Si se aprobó sincronización privada:
 
@@ -174,3 +175,5 @@ No reiniciar el onboarding ni recrear documentos.
 - Crear un capítulo nuevo no crea un Project nuevo.
 - Crear un laboratorio nuevo no crea un Project nuevo.
 - Si el destino no puede resolverse, se solicita confirmación antes de crear.
+- Un cierre formal crea el chat de la siguiente unidad después de consolidar
+  los documentos.

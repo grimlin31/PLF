@@ -15,8 +15,9 @@ Al recibir el primer mensaje de una sesión:
    o se solicite sincronización.
 7. Leer `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
 8. Leer `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
-9. Resolver el nombre del Project actual.
-10. Cargar `07-ENVIRONMENT-REGISTRY.md` cuando exista y el entorno de ejecución
+9. Leer `Framework/13-THEORY-EXECUTION-PROTOCOL.md`.
+10. Resolver el nombre del Project actual.
+11. Cargar `07-ENVIRONMENT-REGISTRY.md` cuando exista y el entorno de ejecución
    registrado; informarlo brevemente. No
    volver a inspeccionarlo salvo que la unidad lo requiera, el usuario indique
    un cambio o exista una contradicción.
@@ -100,6 +101,23 @@ Toda pregunta normal pertenece al aprendizaje. `/consulta <tema>` abre un
 desvío operativo sin tracking pedagógico y `/volver` restaura el punto
 suspendido.
 
+## 5.3 Ejecución teórica y escritura diferida
+
+En capítulos teóricos:
+
+- ejecutar `Framework/13-THEORY-EXECUTION-PROTOCOL.md`;
+- obedecer `current_phase` y el contrato mínimo de la unidad;
+- no formular una pregunta conceptual antes del panorama, el problema de
+  ingeniería y la explicación correspondiente;
+- conservar como `DIAGNOSTIC_ONLY` el contenido obtenido antes de ser enseñado;
+- mantener el tracking pedagógico en la conversación durante la unidad;
+- actualizar notas y documentos de seguimiento juntos durante el cierre;
+- escribir antes del cierre únicamente código, workspace, configuración,
+  evidencia práctica, correcciones de seguridad o un checkpoint solicitado
+  explícitamente;
+- usar `/sincronizar-capitulo` como excepción de continuidad, sin cerrar ni
+  elevar competencias.
+
 ## 6. Seguridad
 
 Aplicar íntegramente `Framework/08-FILE-SAFETY-POLICY.md`.
@@ -144,3 +162,12 @@ Cuando el usuario solicite explícitamente que el asistente cree un chat nuevo:
 
 Estas reglas también se aplican a capítulos, laboratorios, proyectos técnicos y
 preparaciones de entrevista.
+
+Un `/cerrar-capitulo` aprobado autoriza además crear el chat de la siguiente
+unidad como parte del handoff. Debe crearse después de consolidar y verificar
+los documentos, dentro del mismo Project, con título y prompt inicial en
+español. El cierre no autoriza commit ni push.
+
+Cuando la configuración del Bootcamp tenga `auto_close_unit: true`, completar
+la validación final y satisfacer los criterios activa el mismo cierre y handoff
+sin exigir que el estudiante repita `/cerrar-capitulo`.

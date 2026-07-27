@@ -3,7 +3,7 @@
 ## Chapter [X] — [TITLE]
 
 **ID:** `CH-XX`  
-**Version:** 1.1.0
+**Version:** 2.0.0
 **Status:** `PLANNED`  
 **Type:** Theory chapter  
 **Estimated effort:** [MIN–MAX HOURS]  
@@ -26,6 +26,27 @@
 ## 4. Required prior knowledge
 
 - [Prerequisite]
+
+## 4.0 Methodology
+
+```yaml
+methodology:
+  protocol: "THEORY"
+  documentation_mode: "DEFERRED_UNTIL_CLOSURE"
+  current_phase: "ACTIVE_RECALL"
+  current_concept: null
+
+turn_contract:
+  action: "ASK"
+  phase: "ACTIVE_RECALL"
+  question_allowed: true
+  student_response_expected: true
+  next_phase: "PANORAMA"
+```
+
+The conversation maintains the live ledger. Complete this document in one
+consolidated update during closure, except for an explicitly requested
+checkpoint.
 
 ## 4.1 Workspace decision
 
@@ -141,6 +162,12 @@ wait for approval before creating them.
 **Reason:** [Dependency or progression]
 
 ## 17. Document history
+
+### 2.0.0
+
+- Added deterministic theory phases and a minimal turn contract.
+- Deferred pedagogical documentation until closure.
+- Separated diagnostic answers from taught and validated content.
 
 ### 1.1.0
 

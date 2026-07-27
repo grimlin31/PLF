@@ -2,7 +2,7 @@
 
 ## 02 — Changelog
 
-**Versión:** 1.5.0
+**Versión:** 2.0.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Registro oficial de cambios  
@@ -455,6 +455,7 @@ change:
     - "AGENTS.md"
     - "README.md"
     - "Framework/00-MASTER-CONTEXT.md"
+    - "Framework/01-KNOWLEDGE-INDEX.md"
     - "Framework/02-CHANGELOG.md"
     - "Framework/06-BOOTCAMP-STATE.md"
     - "Framework/07-COMMAND-PROTOCOL.md"
@@ -605,7 +606,81 @@ change:
 
 ---
 
+### CHG-0016 — Ejecución teórica determinista, escritura diferida y handoff
+
+```yaml
+change:
+  id: "CHG-0016"
+  title: "Ejecución teórica determinista, escritura diferida y handoff"
+  status: "IMPLEMENTED"
+  type: "MAJOR"
+  proposed_at: "2026-07-26"
+  approved_at: "2026-07-27"
+  implemented_at: "2026-07-27"
+  effective_from: "PLF 2.0.0; reinicio correctivo del Capítulo 6 del Embedded Systems Bootcamp"
+  requested_by: "Estudiante"
+  reason: "El primer intento del Capítulo 6 encadenó preguntas después del repaso sin ejecutar panorama, problema de ingeniería ni explicación desarrollada. Se requiere evitar la desviación sin depender de razonamiento costoso y reducir escrituras documentales durante el aprendizaje."
+  description: "Se convierte el ciclo teórico en fases deterministas con contrato mínimo por turno, se difiere el tracking documental hasta el cierre, se añade auditoría metodológica, manual para principiantes y creación del chat siguiente como parte del cierre."
+  affected_documents:
+    - "AGENTS.md"
+    - "README.md"
+    - "MANUAL-DE-USO.md"
+    - "Framework/00-MASTER-CONTEXT.md"
+    - "Framework/01-KNOWLEDGE-INDEX.md"
+    - "Framework/02-CHANGELOG.md"
+    - "Framework/06-BOOTCAMP-STATE.md"
+    - "Framework/07-COMMAND-PROTOCOL.md"
+    - "Framework/08-FILE-SAFETY-POLICY.md"
+    - "Framework/09-BOOTCAMP-BOOTSTRAP.md"
+    - "Framework/10-MULTI-DEVICE-SYNC.md"
+    - "Framework/11-UNIT-WORKSPACE-PROTOCOL.md"
+    - "Framework/13-THEORY-EXECUTION-PROTOCOL.md"
+    - "Templates/Chapter.template.md"
+    - "Templates/Environment-Registry.template.md"
+    - "Bootcamps/_template/README.md"
+    - "Bootcamps/_template/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/_template/06-CURRENT-CHAPTER.md"
+    - "Bootcamps/_template/07-ENVIRONMENT-REGISTRY.md"
+    - "Bootcamps/Embedded Systems Bootcamp/README.md"
+    - "Bootcamps/Embedded Systems Bootcamp/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/Embedded Systems Bootcamp/01-KNOWLEDGE-INDEX.md"
+    - "Bootcamps/Embedded Systems Bootcamp/02-MENTOR-LOG.md"
+    - "Bootcamps/Embedded Systems Bootcamp/05-BOOTCAMP-STATE.md"
+    - "Bootcamps/Embedded Systems Bootcamp/06-CURRENT-CHAPTER.md"
+    - "Bootcamps/Embedded Systems Bootcamp/07-ENVIRONMENT-REGISTRY.md"
+    - "Bootcamps/Embedded Systems Bootcamp/Chapters/Chapter-06/Notes.md"
+  affected_bootcamps:
+    - "Embedded Systems Bootcamp"
+  backward_compatible: false
+  migration_required: true
+  migration_notes: "Las unidades nuevas usan fases y escritura diferida. El intento anterior del Capítulo 6 se conserva como diagnóstico no acreditable y la unidad se reinicia desde ACTIVE_RECALL bajo PLF 2.0.0."
+  evidence_or_decision_reference: "Retroalimentación del estudiante sobre la desviación metodológica, análisis de coste y aprobación explícita del 2026-07-27."
+```
+
+---
+
 ## 7. Versiones publicadas
+
+### PLF 2.0.0 — Deterministic Theory and Deferred Documentation
+
+**Estado:** `IMPLEMENTED`
+**Fecha de aprobación:** 2026-07-27
+**Compatibilidad:** Incompatible; requiere migración del checkpoint teórico
+
+#### Cambios
+
+- Fases obligatorias para capítulos teóricos.
+- Contrato mínimo por turno compatible con razonamiento reducido.
+- Separación entre diagnóstico, enseñanza y validación.
+- Tracking documental consolidado durante el cierre.
+- Excepción explícita para checkpoints de continuidad.
+- Auditoría independiente de contenido y metodología.
+- Manual de uso para principiantes.
+- Handoff mediante un chat nuevo dentro del mismo Project después del cierre.
+
+#### Documento implementado
+
+- `Framework/13-THEORY-EXECUTION-PROTOCOL.md`
 
 ### PLF 1.5.0 — Automated Setup and Student-Authored Practice
 
@@ -824,6 +899,13 @@ Antes de publicar una versión se debe comprobar:
 ---
 
 ## 12. Historial del documento
+
+### 2.0.0
+
+- Registro de ejecución teórica determinista y contrato mínimo.
+- Registro de escritura documental diferida.
+- Registro del manual para principiantes y handoff posterior al cierre.
+- Migración correctiva del Capítulo 6.
 
 ### 1.5.0
 

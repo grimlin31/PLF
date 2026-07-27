@@ -2,8 +2,8 @@
 
 ## 08 — Política de seguridad de archivos
 
-**Versión:** 1.4.0
-**Requiere PLF:** 1.5.0
+**Versión:** 2.0.0
+**Requiere PLF:** 2.0.0
 **Estado:** Aprobado
 
 ## 1. Principio de mínimo alcance
@@ -46,6 +46,10 @@ Solo:
 ```text
 Bootcamps/<Project name>/
 ```
+
+Durante una unidad, la escritura pedagógica normal se difiere hasta el cierre.
+Antes del cierre solo se escriben artefactos prácticos necesarios, correcciones
+de seguridad o un checkpoint solicitado expresamente.
 
 ## 5. Rutas protegidas
 
@@ -196,7 +200,8 @@ local está limpio y no existe divergencia.
 
 ### 10.3 Checkpoints parciales
 
-Un checkpoint puede actualizar documentos dinámicos del Bootcamp, pero no
+Un checkpoint actualiza únicamente el estado mínimo de continuidad. No
+consolida notas, Mentor Log, Knowledge Index ni Learning Profile, y tampoco
 autoriza:
 
 - cerrar la unidad;

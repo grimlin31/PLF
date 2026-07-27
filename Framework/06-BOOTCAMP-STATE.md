@@ -2,7 +2,7 @@
 
 ## 06 — Bootcamp State
 
-**Versión:** 1.2.0  
+**Versión:** 2.0.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Estado operativo y transferible  
@@ -70,7 +70,7 @@ state:
   project_name: "POR DEFINIR — igual a bootcamp_name"
   resolved_folder: "Bootcamps/<project_name>"
   state_version: "1.0.0"
-  framework_version: "1.2.0"
+  framework_version: "2.0.0"
   curriculum_version: "POR DEFINIR"
   knowledge_index_version: "POR DEFINIR"
   student: "POR DEFINIR"
@@ -174,6 +174,8 @@ mentor_summary:
 
 ```yaml
 active_method:
+  theory_protocol: "Framework/13-THEORY-EXECUTION-PROTOCOL.md"
+  documentation_mode: "DEFERRED_UNTIL_CLOSURE"
   chapter_flow:
     - "Repaso activo"
     - "Panorama general"
@@ -243,11 +245,26 @@ current_focus:
   status: "POR DEFINIR"
   objective: "POR DEFINIR"
   current_concept_or_task: "POR DEFINIR"
+  current_phase: "ACTIVE_RECALL | PANORAMA | ENGINEERING_PROBLEM | CONCEPT_EXPLANATION | REASONING_QUESTION | STUDENT_RESPONSE | CORRECTION | MENTAL_ANCHOR | DESIGN_PRINCIPLE | PROFESSIONAL_APPLICATION | FINAL_VALIDATION | READY_TO_CLOSE"
   pending_question: null
   last_completed_action: "POR DEFINIR"
   next_action: "POR DEFINIR"
   completion_criteria_remaining: []
 ```
+
+Contrato mínimo:
+
+```yaml
+turn_contract:
+  action: "EXPLAIN | ASK | WAIT | CORRECT | SUMMARIZE | CLOSE"
+  phase: "POR DEFINIR"
+  question_allowed: false
+  student_response_expected: false
+  next_phase: "POR DEFINIR"
+```
+
+Durante una unidad, este estado vive en la conversación. Se escribe en archivos
+durante el cierre o mediante un checkpoint solicitado expresamente.
 
 ### Regla crítica
 
@@ -562,6 +579,12 @@ Antes de guardar el estado se debe comprobar:
 ---
 
 ## 25. Historial del documento
+
+### 2.0.0
+
+- Incorporación del contrato mínimo y fase metodológica.
+- Escritura pedagógica diferida hasta el cierre.
+- Excepción explícita para checkpoints de continuidad.
 
 ### 1.2.0
 

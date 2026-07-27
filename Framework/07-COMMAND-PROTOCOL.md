@@ -2,8 +2,8 @@
 
 ## 07 — Protocolo de comandos
 
-**Versión:** 1.4.0
-**Requiere PLF:** 1.5.0
+**Versión:** 2.0.0
+**Requiere PLF:** 2.0.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -30,21 +30,24 @@ Comportamiento:
    `current_focus`.
 2. Leer `Framework/11-UNIT-WORKSPACE-PROTOCOL.md`.
 3. Leer `Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md`.
-4. Cargar el registro compartido y el entorno sin reinspección innecesaria.
-5. Determinar si el trabajo corresponde a chat, editor, IDE, terminal, hardware
+4. Leer `Framework/13-THEORY-EXECUTION-PROTOCOL.md` para capítulos teóricos.
+5. Cargar el registro compartido y el entorno sin reinspección innecesaria.
+6. Determinar si el trabajo corresponde a chat, editor, IDE, terminal, hardware
    o una combinación.
-6. Analizar artefactos existentes y preservar cambios del usuario.
-7. Mostrar árbol, archivos, ruta, plan de setup, alcance de instalaciones,
+7. Analizar artefactos existentes y preservar cambios del usuario.
+8. Mostrar árbol, archivos, ruta, plan de setup, alcance de instalaciones,
    acciones reservadas al estudiante y exclusiones.
-8. Esperar aprobación explícita.
-9. Crear únicamente archivos aprobados.
-10. Verificar herramientas existentes antes de instalar.
-11. Preparar automáticamente lo operativo dentro del alcance aprobado.
-12. Guiar la configuración solo si es aprendizaje pendiente o requiere al
+9. Esperar aprobación explícita.
+10. Crear únicamente archivos aprobados.
+11. Verificar herramientas existentes antes de instalar.
+12. Preparar automáticamente lo operativo dentro del alcance aprobado.
+13. Guiar la configuración solo si es aprendizaje pendiente o requiere al
     estudiante.
-13. Registrar evidencia y no comenzar la implementación hasta alcanzar
+14. Registrar evidencia y no comenzar la implementación hasta alcanzar
     `READY` o aceptar explícitamente `READY_WITH_LIMITATIONS`.
-14. Iniciar la implementación en modo `STUDENT_AUTHORED`.
+15. Iniciar la implementación en modo `STUDENT_AUTHORED`.
+16. En teoría, inicializar `current_phase` y un contrato mínimo; mantener el
+    ledger en conversación y diferir el tracking documental hasta el cierre.
 
 No excede el setup aprobado. Las credenciales, autorizaciones del sistema,
 hardware físico y decisiones ambiguas permanecen con el estudiante.
@@ -165,6 +168,10 @@ Propósito:
 Crear un checkpoint parcial, actualizar los documentos dinámicos necesarios y
 publicar el estado actual únicamente en el repositorio privado del Bootcamp.
 
+En PLF 2.0.0 esta orden es la excepción explícita a la escritura documental
+diferida. Debe guardar el checkpoint mínimo necesario para continuidad, no
+consolidar notas finales.
+
 Este comando no cierra el capítulo.
 
 #### Precondiciones
@@ -181,13 +188,14 @@ Este comando no cierra el capítulo.
 
 #### Actualización pedagógica
 
-Actualizar, según la evidencia disponible:
+Actualizar únicamente el checkpoint mínimo:
 
-- notas de la unidad activa;
-- `02-MENTOR-LOG.md`, con tiempo únicamente confirmado;
-- `05-BOOTCAMP-STATE.md`;
+- `05-BOOTCAMP-STATE.md`, solo cuando sea necesario para localizar la unidad;
 - `06-CURRENT-CHAPTER.md`;
-- ejercicios, código o evidencia activa que ya pertenezcan a la unidad.
+- código o evidencia activa necesaria para continuidad.
+
+No consolidar notas, Mentor Log, Knowledge Index ni Learning Profile. Esos
+documentos permanecen diferidos hasta el cierre.
 
 Debe registrar:
 
@@ -318,8 +326,17 @@ Antes de cerrar:
 5. Separar contenido visto de competencia demostrada.
 6. Solicitar al estudiante el tiempo no registrado, si es relevante.
 7. No cerrar si falta evidencia obligatoria.
+8. Para teoría, ejecutar la auditoría de contenido y metodología del protocolo
+   13.
 
 Si falta algo, responder con una lista concreta de pendientes y no modificar el estado a `COMPLETED`.
+
+#### Escritura consolidada
+
+El cierre constituye el punto normal de escritura documental. Debe actualizar
+en un único conjunto coherente las notas y todos los documentos dinámicos
+aplicables. No se realizan actualizaciones pedagógicas después de cada respuesta
+durante la unidad.
 
 #### Archivos actualizados normalmente
 
@@ -329,6 +346,7 @@ Obligatorios:
 - `01-KNOWLEDGE-INDEX.md`;
 - `02-MENTOR-LOG.md`;
 - `05-BOOTCAMP-STATE.md`.
+- `06-CURRENT-CHAPTER.md`.
 
 Condicionales:
 
@@ -353,6 +371,20 @@ Prohibidos durante el cierre normal:
 4. Confirmar que no se modificaron rutas protegidas.
 5. Enumerar los archivos cambiados.
 6. Informar cualquier dato no registrado o estimado.
+7. Generar el título y el prompt de handoff para la siguiente unidad.
+8. Crear un chat en español dentro del mismo Project usando ese prompt.
+9. Informar el identificador del chat creado.
+
+La creación del chat forma parte de `/cerrar-capitulo` y queda autorizada por el
+comando. Se ejecuta después de verificar los documentos. El cierre no autoriza
+commit, push ni publicación remota.
+
+#### Activación automática
+
+Cuando `00-BOOTCAMP-CONFIG.md` contenga `auto_close_unit: true`, una validación
+final aprobada y sin preguntas pendientes activa este mismo flujo sin requerir
+un comando adicional. Si falta tiempo relevante, evidencia o una decisión, el
+cierre se detiene y solicita únicamente ese dato.
 
 ### `/cancelar-cierre`
 
@@ -398,6 +430,17 @@ Todo chat creado por el asistente debe:
 5. cargar el mismo ámbito Project–Bootcamp;
 6. respetar `current_focus`;
 7. evitar cualquier Project alternativo o contexto sin Project.
+
+Después de `/cerrar-capitulo`, el mensaje inicial debe incluir:
+
+1. nombre exacto del Project;
+2. ruta exacta del Bootcamp;
+3. siguiente unidad y tipo;
+4. archivos de contexto que debe cargar;
+5. fase pedagógica inicial y contrato aplicable;
+6. entorno registrado que puede reutilizar;
+7. prohibición de reinspección innecesaria;
+8. idioma español.
 
 Si el Project actual no está disponible como destino inequívoco, el asistente no
 debe crear el chat. Debe solicitar al estudiante que confirme o seleccione el

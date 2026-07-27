@@ -2,8 +2,8 @@
 
 ## 10 — Sincronización privada entre dispositivos
 
-**Versión:** 1.0.0  
-**Requiere PLF:** 1.2.0  
+**Versión:** 2.0.0
+**Requiere PLF:** 2.0.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -178,6 +178,10 @@ punto privado de sincronización.
 Se puede ejecutar `/estado-capitulo` en cualquier momento. Es una consulta y no
 modifica el estado.
 
+PLF 2.0.0 usa escritura documental diferida. Si el estudiante necesita cambiar
+de chat o dispositivo antes del cierre, `/sincronizar-capitulo` constituye una
+excepción explícita y autoriza escribir un checkpoint mínimo.
+
 ### Antes de cambiar de computador
 
 1. Ejecutar `/sincronizar-capitulo`.
@@ -217,6 +221,9 @@ Un checkpoint:
 - no eleva competencias;
 - no inventa evidencia;
 - no cambia `current_focus` a la unidad siguiente.
+
+El checkpoint debe contener solo lo necesario para reanudar. No consolida las
+notas finales ni convierte el ledger de sesión en evidencia aprobada.
 
 ## 9. Conflictos
 
@@ -298,4 +305,3 @@ Ambos computadores comparten:
 - la misma pregunta pendiente;
 - el mismo punto de reanudación;
 - un historial recuperable.
-

@@ -4,7 +4,7 @@
 
 **Version:** 1.4.0
 **Status:** `DRAFT`  
-**Framework version:** 1.5.0
+**Framework version:** 2.0.0
 
 ```yaml
 bootcamp:
@@ -64,6 +64,10 @@ runtime_preferences:
   operational_setup_executed_by: "ASSISTANT_AFTER_APPROVAL"
   pedagogical_configuration_mode: "GUIDED_STUDENT"
   implementation_mode: "STUDENT_AUTHORED"
+  theory_protocol: "Framework/13-THEORY-EXECUTION-PROTOCOL.md"
+  documentation_mode: "DEFERRED_UNTIL_CLOSURE"
+  auto_close_unit: true
+  create_next_chat_after_closure: true
   require_environment_readiness_gate: true
   environment_registry: "07-ENVIRONMENT-REGISTRY.md"
 
