@@ -2,7 +2,7 @@
 
 ## 00 — Master Context
 
-**Versión:** 2.0.0
+**Versión:** 2.1.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Especificación fundacional  
@@ -553,6 +553,27 @@ La mentoría debe sentirse como una conversación activa.
   suspende el hilo para una cuestión operativa sin tracking pedagógico y
   `/volver` restaura el punto pendiente.
 
+### Pausas declaradas y repaso dinámico
+
+El estudiante declara cada pausa y reanudación. `/pausa` registra el final del
+tramo activo y conserva fase, punto, pregunta y siguiente acción.
+`/reanudar-sesion` registra un tramo nuevo, presenta un resumen de la unidad y
+ejecuta un repaso dinámico antes de restaurar el punto suspendido.
+
+El repaso:
+
+- usa una sola pregunta por turno;
+- selecciona conceptos trabajados antes de la pausa;
+- se adapta según retención y dificultad;
+- corrige antes de avanzar;
+- registra respuestas iniciales, brechas, correcciones, mejoras y explicaciones
+  como evidencia iterativa;
+- distingue diagnóstico, aprendizaje, retención y dominio sin elevar una
+  competencia únicamente por participación.
+
+El tiempo transcurrido de calendario, el tiempo efectivo medido por tramos, el
+tiempo pausado y el tiempo adicional informado se mantienen separados.
+
 ### Entorno operativo
 
 - Conservar el último sistema operativo confirmado.
@@ -740,6 +761,12 @@ Finaliza cuando:
 
 ## 23. Historial del documento
 
+### 2.1.0
+
+- Incorporación de pausas declaradas y medición por tramos activos.
+- Incorporación de repaso dinámico obligatorio al reanudar.
+- Registro iterativo de diagnóstico, corrección, retención y dominio.
+
 ### 2.0.0
 
 - Incorporación del protocolo determinista de teoría.
@@ -845,7 +872,9 @@ Los comandos mínimos son:
 - `/actualizar-framework`;
 - `/iniciar-unidad`;
 - `/consulta`;
-- `/volver`.
+- `/volver`;
+- `/pausa`;
+- `/reanudar-sesion`.
 
 El mensaje `hola` inicia el bootstrap cuando no existe un Bootcamp coincidente.
 

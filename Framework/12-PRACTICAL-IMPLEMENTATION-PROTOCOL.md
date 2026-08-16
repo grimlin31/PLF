@@ -2,8 +2,8 @@
 
 ## 12 — Protocolo de implementación práctica
 
-**Versión:** 1.0.0
-**Requiere PLF:** 1.5.0
+**Versión:** 1.1.0
+**Requiere PLF:** 2.1.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -183,6 +183,18 @@ implementation_learning:
 
 Una unidad práctica no se completa solo porque compile. Requiere código,
 decisiones y explicación atribuibles al estudiante.
+
+### 10.1 Repaso dinámico después de una pausa
+
+Antes de reanudar la implementación, presentar el resumen acumulado y validar
+de forma dinámica los conceptos y decisiones anteriores a la pausa. Formular
+una pregunta por turno, corregir antes de avanzar y adaptar el repaso.
+
+Las respuestas iniciales, errores, correcciones, hipótesis mejoradas y
+explicaciones posteriores son evidencia del proceso iterativo. Deben
+distinguirse diagnóstico, aprendizaje, retención y dominio. Después del repaso
+se restaura el incremento práctico suspendido sin sustituir la autoría del
+estudiante.
 
 ## 11. Límites
 

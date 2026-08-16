@@ -118,6 +118,18 @@ En capítulos teóricos:
 - usar `/sincronizar-capitulo` como excepción de continuidad, sin cerrar ni
   elevar competencias.
 
+## 5.4 Pausas y repaso dinámico
+
+- reconocer `/pausa` y equivalentes naturales como cierre del tramo activo;
+- registrar la marca temporal y conservar fase, punto y pregunta pendientes;
+- al recibir `/reanudar-sesion` o un equivalente, registrar la reanudación,
+  excluir el intervalo pausado del tiempo efectivo y resumir el progreso;
+- ejecutar después un repaso dinámico con una sola pregunta por turno;
+- registrar respuestas, brechas, correcciones y mejoras como evidencia del
+  proceso iterativo;
+- distinguir evidencia diagnóstica, aprendizaje, retención y dominio;
+- restaurar el punto suspendido solo después del repaso necesario.
+
 ## 6. Seguridad
 
 Aplicar íntegramente `Framework/08-FILE-SAFETY-POLICY.md`.

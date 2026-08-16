@@ -2,8 +2,8 @@
 
 ## 13 — Protocolo de ejecución de capítulos teóricos
 
-**Versión:** 1.0.0
-**Requiere PLF:** 2.0.0
+**Versión:** 1.1.0
+**Requiere PLF:** 2.1.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -189,6 +189,25 @@ La escritura diferida aumenta el riesgo de perder progreso si termina la sesión
 Cuando el estudiante necesite cambiar de chat o dispositivo antes del cierre,
 debe usar `/sincronizar-capitulo`. Esa orden constituye una excepción explícita
 y autoriza un checkpoint mínimo, sin cerrar ni elevar competencias.
+
+### 8.1 Pausa y repaso dinámico
+
+Una pausa suspende la fase actual sin modificar su resultado. Debe conservarse
+la fase, concepto, pregunta pendiente y siguiente acción. Al reanudar:
+
+1. presentar un resumen de conceptos y progreso;
+2. entrar temporalmente en `RESUME_REVIEW`;
+3. formular una sola pregunta por turno sobre contenido ya trabajado;
+4. corregir antes de la siguiente pregunta;
+5. adaptar la extensión según retención y dificultad;
+6. registrar respuestas, brechas, correcciones y mejoras como evidencia
+   diagnóstica, de aprendizaje, retención o dominio;
+7. restaurar exactamente la fase y pregunta suspendidas.
+
+El repaso es parte del aprendizaje iterativo. Una respuesta incorrecta aporta
+evidencia diagnóstica; una corrección razonada aporta evidencia de aprendizaje;
+la recuperación autónoma aporta retención; el dominio solo se registra cuando
+se satisfacen sus criterios.
 
 ## 9. Recuperación de una desviación
 

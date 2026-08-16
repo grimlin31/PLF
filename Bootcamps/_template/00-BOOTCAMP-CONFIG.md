@@ -4,7 +4,7 @@
 
 **Version:** 1.4.0
 **Status:** `DRAFT`  
-**Framework version:** 2.0.0
+**Framework version:** 2.1.0
 
 ```yaml
 bootcamp:
@@ -70,6 +70,12 @@ runtime_preferences:
   create_next_chat_after_closure: true
   require_environment_readiness_gate: true
   environment_registry: "07-ENVIRONMENT-REGISTRY.md"
+  pause_tracking:
+    student_declares_pause_and_resume: true
+    record_timestamps: true
+    calculate_active_and_paused_minutes: true
+    dynamic_review_on_resume: true
+    dynamic_review_evidence: "DIAGNOSTIC_LEARNING_RETENTION_MASTERY"
 
 runtime_environment:
   operating_system: "POR DEFINIR"

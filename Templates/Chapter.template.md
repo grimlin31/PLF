@@ -3,7 +3,7 @@
 ## Chapter [X] — [TITLE]
 
 **ID:** `CH-XX`  
-**Version:** 2.0.0
+**Version:** 2.1.0
 **Status:** `PLANNED`  
 **Type:** Theory chapter  
 **Estimated effort:** [MIN–MAX HOURS]  
@@ -47,6 +47,26 @@ turn_contract:
 The conversation maintains the live ledger. Complete this document in one
 consolidated update during closure, except for an explicitly requested
 checkpoint.
+
+## 4.0.1 Pause and dynamic review
+
+```yaml
+unit_timing:
+  started_at: null
+  closed_at: null
+  active_minutes: 0
+  paused_minutes: 0
+  active_segment_started_at: null
+  pause_started_at: null
+  status: "NOT_STARTED | ACTIVE | PAUSED | CLOSED"
+
+resume_review:
+  required: false
+  suspended_phase: null
+  concepts_to_review: []
+  current_question: null
+  result: "NOT_STARTED | IN_PROGRESS | PASSED | NEEDS_REINFORCEMENT"
+```
 
 ## 4.1 Workspace decision
 

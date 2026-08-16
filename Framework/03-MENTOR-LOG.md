@@ -2,7 +2,7 @@
 
 ## 03 — Mentor Log
 
-**Versión:** 1.0.0  
+**Versión:** 1.1.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Registro cronológico de mentoría  
@@ -94,6 +94,17 @@ Las observaciones del mentor deben apoyarse en:
 ### 3.4 Registro conciso
 
 Cada entrada debe ser suficiente para reanudar el trabajo, pero no debe duplicar todo el contenido del capítulo.
+
+### 3.5 Medición por tramos activos
+
+Cuando el estudiante declare pausas, registrar inicio, pausa, reanudación y
+cierre. El tiempo efectivo medido suma únicamente tramos `ACTIVE`; el intervalo
+`PAUSED` se registra aparte. El tiempo transcurrido de calendario no se presenta
+como tiempo efectivo.
+
+Al reanudar, el repaso dinámico genera evidencia cronológica de respuestas,
+brechas, correcciones, mejoras y retención. El dominio requiere satisfacer el
+criterio de la competencia y no se deduce solo de haber realizado el repaso.
 
 ---
 

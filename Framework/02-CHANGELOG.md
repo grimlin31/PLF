@@ -2,7 +2,7 @@
 
 ## 02 — Changelog
 
-**Versión:** 2.0.0
+**Versión:** 2.1.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Registro oficial de cambios  
@@ -659,7 +659,63 @@ change:
 
 ---
 
+### CHG-0017 — Pausas declaradas y repaso dinámico
+
+```yaml
+change:
+  id: "CHG-0017"
+  title: "Pausas declaradas, tiempo por tramos y repaso dinámico"
+  status: "IMPLEMENTED"
+  type: "MINOR"
+  proposed_at: "2026-08-16"
+  approved_at: "2026-08-16"
+  implemented_at: "2026-08-16"
+  effective_from: "PLF 2.1.0; unidades iniciadas después del Laboratorio 7.1 del Embedded Systems Bootcamp"
+  requested_by: "Estudiante"
+  reason: "Excluir pausas declaradas del tiempo efectivo y verificar de forma iterativa la retención antes de continuar una unidad."
+  description: "Se incorporan /pausa y /reanudar-sesion, medición por tramos activos, resumen al retomar y repaso dinámico con una pregunta por turno. Todo el ciclo de respuesta, brecha, corrección y mejora genera evidencia diferenciada."
+  affected_documents:
+    - "README.md"
+    - "AGENTS.md"
+    - "Framework/00-MASTER-CONTEXT.md"
+    - "Framework/02-CHANGELOG.md"
+    - "Framework/03-MENTOR-LOG.md"
+    - "Framework/06-BOOTCAMP-STATE.md"
+    - "Framework/07-COMMAND-PROTOCOL.md"
+    - "Framework/10-MULTI-DEVICE-SYNC.md"
+    - "Framework/11-UNIT-WORKSPACE-PROTOCOL.md"
+    - "Framework/12-PRACTICAL-IMPLEMENTATION-PROTOCOL.md"
+    - "Framework/13-THEORY-EXECUTION-PROTOCOL.md"
+    - "Templates/Chapter.template.md"
+    - "Templates/Lab.template.md"
+    - "Templates/Project.template.md"
+    - "Bootcamps/_template/00-BOOTCAMP-CONFIG.md"
+    - "Bootcamps/_template/06-CURRENT-CHAPTER.md"
+  affected_bootcamps:
+    - "Embedded Systems Bootcamp"
+  backward_compatible: true
+  migration_required: false
+  migration_notes: "Las unidades activas conservan su método estable. Las marcas y el repaso obligatorio comienzan en la unidad siguiente; los campos nuevos son compatibles y opcionales para checkpoints antiguos."
+  evidence_or_decision_reference: "Solicitud, corrección y aprobación explícita del estudiante el 2026-08-16."
+```
+
+---
+
 ## 7. Versiones publicadas
+
+### PLF 2.1.0 — Declared Pauses and Dynamic Review
+
+**Estado:** `IMPLEMENTED`
+**Fecha de aprobación:** 2026-08-16
+**Compatibilidad:** Compatible; sin migración obligatoria de unidades activas
+
+#### Cambios
+
+- Marcas de inicio, pausa, reanudación y cierre.
+- Separación de tiempo transcurrido, efectivo, pausado e informado.
+- Resumen obligatorio al reanudar.
+- Repaso dinámico de una pregunta por turno.
+- Evidencia iterativa de diagnóstico, aprendizaje, retención y dominio.
 
 ### PLF 2.0.0 — Deterministic Theory and Deferred Documentation
 
@@ -899,6 +955,11 @@ Antes de publicar una versión se debe comprobar:
 ---
 
 ## 12. Historial del documento
+
+### 2.1.0
+
+- Registro de pausas declaradas, tiempo por tramos y repaso dinámico.
+- Entrada `CHG-0017` implementada y aprobada.
 
 ### 2.0.0
 

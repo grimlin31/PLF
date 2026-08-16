@@ -2,8 +2,8 @@
 
 ## 07 — Protocolo de comandos
 
-**Versión:** 2.0.0
-**Requiere PLF:** 2.0.0
+**Versión:** 2.1.0
+**Requiere PLF:** 2.1.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -11,6 +11,49 @@
 Definir órdenes breves y deterministas para operar un Bootcamp sin depender de frases exactas. Los comandos no distinguen mayúsculas y aceptan tildes opcionales.
 
 ## 2. Comandos oficiales
+
+### `/pausa`
+
+Alias naturales:
+
+- `pausa`;
+- `voy a pausar`;
+- `pausar la sesión`;
+- `haré una pausa`.
+
+Comportamiento:
+
+1. Registrar fecha y hora en la zona configurada.
+2. Cerrar y sumar el tramo activo actual.
+3. Cambiar el estado temporal a `PAUSED`.
+4. Conservar fase, punto, pregunta pendiente y siguiente acción.
+5. Marcar `resume_review.required: true`.
+6. Mostrar un resumen breve de lo trabajado.
+7. No avanzar contenido, evaluación ni competencias.
+
+### `/reanudar-sesion`
+
+Alias naturales:
+
+- `reanudo`;
+- `reanudar la sesión`;
+- `continuemos después de la pausa`;
+- `terminó la pausa`.
+
+Comportamiento:
+
+1. Registrar la reanudación e iniciar un tramo activo nuevo.
+2. Calcular el intervalo pausado sin sumarlo al tiempo efectivo.
+3. Presentar un resumen de la unidad y el punto suspendido.
+4. Seleccionar los conceptos relevantes anteriores a la pausa.
+5. Ejecutar un repaso dinámico con una sola pregunta por turno.
+6. Corregir cada respuesta antes de avanzar y adaptar la profundidad.
+7. Registrar respuestas, brechas, correcciones y mejoras como evidencia
+   diagnóstica, de aprendizaje, retención o dominio según corresponda.
+8. Restaurar la fase, punto y pregunta suspendidos después del repaso.
+
+No confundir `/reanudar-sesion`, que termina una pausa pedagógica local, con
+`/reanudar-capitulo`, que obtiene un checkpoint desde otro dispositivo.
 
 ### `/iniciar-unidad`
 

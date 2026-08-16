@@ -3,7 +3,7 @@
 ## Chapter [X.Y] — Laboratory: [TITLE]
 
 **ID:** `CH-XX.Y-LAB`  
-**Version:** 1.2.0
+**Version:** 1.3.0
 **Status:** `PLANNED`  
 **Parent chapter:** `CH-XX`  
 **Type:** Practical laboratory  
@@ -66,6 +66,10 @@ pending learning objective or requires user intervention.
 - [ ] [Observable criterion]
 
 ## 7. Student hypothesis
+
+Before resuming after a declared pause, summarize progress and execute a dynamic
+review with one question per turn. Record diagnostic, learning, retention and
+mastery evidence separately.
 
 [The student describes the expected behavior and proposed approach before implementation.]
 

@@ -1,6 +1,6 @@
 # Current Chapter Checkpoint
 
-**Version:** 2.0.0
+**Version:** 2.1.0
 **Status:** `NOT_STARTED`  
 **Bootcamp:** `POR DEFINIR`  
 **Last updated:** `POR DEFINIR`
@@ -85,6 +85,30 @@ dialogue:
 ## Confirmed session time
 
 ```yaml
+unit_timing:
+  started_at: null
+  closed_at: null
+  elapsed_minutes: null
+  active_minutes: 0
+  paused_minutes: 0
+  active_segment_started_at: null
+  pause_started_at: null
+  status: "NOT_STARTED | ACTIVE | PAUSED | CLOSED"
+
+resume_review:
+  required: false
+  suspended_phase: null
+  suspended_point: null
+  suspended_question: null
+  concepts_to_review: []
+  current_question: null
+  result: "NOT_STARTED | IN_PROGRESS | PASSED | NEEDS_REINFORCEMENT"
+  evidence:
+    diagnostic: []
+    learning: []
+    retention: []
+    mastery: []
+
 session_time:
   mentoring_minutes: 0
   self_study_minutes: 0

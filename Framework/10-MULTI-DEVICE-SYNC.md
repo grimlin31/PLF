@@ -2,8 +2,8 @@
 
 ## 10 — Sincronización privada entre dispositivos
 
-**Versión:** 2.0.0
-**Requiere PLF:** 2.0.0
+**Versión:** 2.1.0
+**Requiere PLF:** 2.1.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -181,6 +181,11 @@ modifica el estado.
 PLF 2.0.0 usa escritura documental diferida. Si el estudiante necesita cambiar
 de chat o dispositivo antes del cierre, `/sincronizar-capitulo` constituye una
 excepción explícita y autoriza escribir un checkpoint mínimo.
+
+Si la unidad está pausada, el checkpoint conserva además la marca de pausa, los
+minutos activos y pausados acumulados, el punto suspendido y el estado del
+repaso dinámico. Reanudar desde otro dispositivo no cierra automáticamente la
+pausa: después de actualizar el repositorio se aplica `/reanudar-sesion`.
 
 ### Antes de cambiar de computador
 

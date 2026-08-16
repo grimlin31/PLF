@@ -2,7 +2,7 @@
 
 ## 06 — Bootcamp State
 
-**Versión:** 2.0.0
+**Versión:** 2.1.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Estado operativo y transferible  
@@ -70,7 +70,7 @@ state:
   project_name: "POR DEFINIR — igual a bootcamp_name"
   resolved_folder: "Bootcamps/<project_name>"
   state_version: "1.0.0"
-  framework_version: "2.0.0"
+  framework_version: "2.1.0"
   curriculum_version: "POR DEFINIR"
   knowledge_index_version: "POR DEFINIR"
   student: "POR DEFINIR"
@@ -245,7 +245,7 @@ current_focus:
   status: "POR DEFINIR"
   objective: "POR DEFINIR"
   current_concept_or_task: "POR DEFINIR"
-  current_phase: "ACTIVE_RECALL | PANORAMA | ENGINEERING_PROBLEM | CONCEPT_EXPLANATION | REASONING_QUESTION | STUDENT_RESPONSE | CORRECTION | MENTAL_ANCHOR | DESIGN_PRINCIPLE | PROFESSIONAL_APPLICATION | FINAL_VALIDATION | READY_TO_CLOSE"
+  current_phase: "ACTIVE_RECALL | PANORAMA | ENGINEERING_PROBLEM | CONCEPT_EXPLANATION | REASONING_QUESTION | STUDENT_RESPONSE | CORRECTION | MENTAL_ANCHOR | DESIGN_PRINCIPLE | PROFESSIONAL_APPLICATION | FINAL_VALIDATION | READY_TO_CLOSE | PAUSED | RESUME_REVIEW"
   pending_question: null
   last_completed_action: "POR DEFINIR"
   next_action: "POR DEFINIR"
@@ -287,6 +287,38 @@ chapter_checkpoint:
 ```
 
 Actualizar este bloque no cierra la unidad ni modifica su nivel de competencia.
+
+### Pausa y reanudación
+
+```yaml
+unit_timing:
+  started_at: null
+  closed_at: null
+  elapsed_minutes: null
+  active_minutes: 0
+  paused_minutes: 0
+  active_segment_started_at: null
+  pause_started_at: null
+  status: "NOT_STARTED | ACTIVE | PAUSED | CLOSED"
+
+resume_review:
+  required: false
+  suspended_phase: null
+  suspended_point: null
+  suspended_question: null
+  concepts_to_review: []
+  current_question: null
+  result: "NOT_STARTED | IN_PROGRESS | PASSED | NEEDS_REINFORCEMENT"
+  evidence:
+    diagnostic: []
+    learning: []
+    retention: []
+    mastery: []
+```
+
+Las marcas de tiempo permiten calcular tramos activos y pausados. El repaso
+dinámico forma parte del aprendizaje y conserva toda la evolución como
+evidencia diferenciada.
 
 ---
 

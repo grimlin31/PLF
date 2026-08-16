@@ -2,8 +2,8 @@
 
 ## 11 — Protocolo de entorno y workspace de unidades
 
-**Versión:** 2.0.0
-**Requiere PLF:** 2.0.0
+**Versión:** 2.1.0
+**Requiere PLF:** 2.1.0
 **Estado:** Aprobado
 
 ## 1. Propósito
@@ -294,6 +294,16 @@ restaura la pregunta o acción pedagógica pendiente.
 Si `/sincronizar-capitulo` se ejecuta durante una consulta, el checkpoint
 conserva el punto de retorno y cualquier configuración confirmada, pero no
 atribuye progreso pedagógico.
+
+### 10.1 Pausas y reanudación
+
+`/pausa` cierra el tramo activo y conserva el punto exacto sin alterar el estado
+del workspace. `/reanudar-sesion` abre un tramo nuevo, resume el progreso y
+ejecuta un repaso dinámico antes de continuar la preparación o implementación.
+
+En unidades prácticas, el repaso prioriza decisiones, APIs, hipótesis,
+comportamientos observados, errores y criterios ya trabajados. Mantiene una
+pregunta por turno y registra toda la evolución como evidencia iterativa.
 
 ## 11. Límites
 

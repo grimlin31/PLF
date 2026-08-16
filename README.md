@@ -1,6 +1,6 @@
 # Professional Learning Framework (PLF)
 
-**Versión:** 2.0.0
+**Versión:** 2.1.0
 **Estado:** Aprobado  
 **Framework:** Professional Learning Framework (PLF)  
 **Tipo de documento:** Documento Fundacional
@@ -344,6 +344,14 @@ upstream  → repositorio público grimlin31/PLF
 No se utiliza un fork privado del PLF público. Los comandos
 `/sincronizar-capitulo` y `/reanudar-capitulo` preservan una unidad incompleta
 sin confundirla con un cierre formal.
+
+### Pausas y repaso dinámico
+
+`/pausa` cierra un tramo activo y conserva el punto pedagógico. Al usar
+`/reanudar-sesion`, el PLF excluye la pausa del tiempo efectivo medido,
+presenta un resumen y ejecuta un repaso dinámico de una pregunta por turno.
+Las respuestas, brechas, correcciones y mejoras del repaso constituyen evidencia
+iterativa, sin convertir automáticamente una dificultad inicial en dominio.
 
 ---
 

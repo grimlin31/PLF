@@ -3,7 +3,7 @@
 ## Project [X] — [TITLE]
 
 **ID:** `PRJ-XX`  
-**Version:** 1.2.0
+**Version:** 1.3.0
 **Status:** `PLANNED`  
 **Type:** Integrating project  
 **Estimated effort:** [MIN–MAX HOURS]
@@ -71,6 +71,10 @@ approved operational setup. Configuration is student-guided only when it is a
 pending learning objective or requires user intervention.
 
 ## 7. Competencies integrated
+
+After a declared pause, summarize the project state and complete a dynamic
+review of prior decisions, requirements and evidence before implementation
+continues. Use one question per turn and preserve the full iterative evidence.
 
 | ID | Competency | Required level | Evidence |
 |---|---|---|---|
